@@ -1,5 +1,8 @@
 # Copied from https://gitignore.io/
 
+.DS_Store
+/WebGL\ Builds/
+
 # Created by https://www.toptal.com/developers/gitignore/api/unity
 # Edit at https://www.toptal.com/developers/gitignore?templates=unity
 
