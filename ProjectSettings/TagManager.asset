@@ -8,6 +8,8 @@ TagManager:
   - ProjectileParent
   - Projectile
   - Enemy
+  - Rabbit
+  - Sword
   layers:
   - Default
   - TransparentFX
