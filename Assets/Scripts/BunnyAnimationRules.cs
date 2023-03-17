@@ -29,6 +29,8 @@ public class BunnyAnimationRules : MonoBehaviour
                     PlaySomething("Run"); 
                 } else if ((Input.GetKey("w") || Input.GetKey("a") ||  Input.GetKey("s") ||  Input.GetKey("d"))) {
                     PlaySomething("Walk");
+                } else if ((Input.GetKey("h") && (BunnyHeal.healTimes > 0) && (!BunnyInvisible.isInvisible))) {
+                    PlaySomething("Spin");
                 } else {
                     PlaySomething("Idle A");
                 }

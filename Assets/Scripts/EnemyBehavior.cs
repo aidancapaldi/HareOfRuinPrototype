@@ -22,7 +22,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         float step = moveSpeed * Time.deltaTime;
         float distance = Vector3.Distance(transform.position, player.position);
-        if (distance > minDistance) {
+        if (distance > minDistance && !BunnyInvisible.isInvisible) {
             transform.LookAt(player);
             transform.position = Vector3.MoveTowards(transform.position, player.position, step);
         }
