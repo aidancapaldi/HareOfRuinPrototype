@@ -34,6 +34,8 @@ public class ShootProjectile : MonoBehaviour
             projectile.transform.SetParent(
                 GameObject.FindGameObjectWithTag("ProjectileParent").transform);
 
+            
+
             //AudioSource.PlayClipAtPoint(spellSFX, transform.position);
         }
     }
