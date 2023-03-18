@@ -60,7 +60,7 @@ public class CasterEnemyAI : MonoBehaviour
                 UpdateDeadState();
                 break;            
         }
-        elapsedTime+= Time.deltaTime;
+        elapsedTime += Time.deltaTime;
     }
 
     private void Initialize() {
@@ -77,7 +77,6 @@ public class CasterEnemyAI : MonoBehaviour
 
     void UpdatePatrolState() 
     {
-        Debug.Log("Patrolling");
         anim.SetInteger("animState", 1);
         if (Vector3.Distance(transform.position, nextDestination) < 1)
         {
@@ -93,7 +92,6 @@ public class CasterEnemyAI : MonoBehaviour
 
     void UpdateChaseState() 
     {
-        Debug.Log("Chasing");
         anim.SetInteger("animState", 2);
 
         nextDestination = player.transform.position;
@@ -113,8 +111,6 @@ public class CasterEnemyAI : MonoBehaviour
 
     void UpdateAttackState() 
     {
-        Debug.Log("Attack");
-
         nextDestination = player.transform.position;
 
         if (distanceToPlayer <= attackDistance)
@@ -134,7 +130,17 @@ public class CasterEnemyAI : MonoBehaviour
 
     void UpdateDeadState() 
     {
-        
+        anim.SetInteger("animState", 4);
+        Destroy(gameObject, 1f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collided with " + collision.gameObject.ToString());
+        if (collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Sword"))
+        {
+            currentState = FSMStates.Dead;
+        }
     }
 
     void FindNextPoint()
