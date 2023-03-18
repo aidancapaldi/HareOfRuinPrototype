@@ -11,6 +11,9 @@ TagManager:
   - Rabbit
   - Sword
   - HotBarSlot
+  - WanderPoint
+  - CasterWandTip
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
