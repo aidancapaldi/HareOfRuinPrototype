@@ -5,12 +5,10 @@ using UnityEngine;
 public class BunnyAnimationRules : MonoBehaviour
 {
     Animator m_Animator;
-    GameObject sword;
     // Start is called before the first frame update
     void Start()
     {
         m_Animator = GetComponent<Animator>();
-        sword = GameObject.FindWithTag("Sword");
     }
 
     // Update is called once per frame
@@ -21,8 +19,7 @@ public class BunnyAnimationRules : MonoBehaviour
 
     void FixedUpdate() {
         m_Animator.GetComponent<Animator>().enabled = true;
-        sword.active = false;
-
+        
         if (!BunnyHealth.isPlayerDead) {
             if (Input.GetKey(KeyCode.Space)) {
                 PlaySomething("Jump");
@@ -32,13 +29,7 @@ public class BunnyAnimationRules : MonoBehaviour
                     PlaySomething("Run"); 
                 } else if ((Input.GetKey("w") || Input.GetKey("a") ||  Input.GetKey("s") ||  Input.GetKey("d"))) {
                     PlaySomething("Walk");
-                } else if ((Input.GetKey("h") && (BunnyHeal.healTimes > 0) && (!BunnyInvisible.isInvisible))) {
-                    PlaySomething("Spin");
-                } else if ((Input.GetKey("c"))) {
-                    sword.active = true; 
-                    PlaySomething("Clicked");
-                }
-                else {
+                } else {
                     PlaySomething("Idle A");
                 }
             }        

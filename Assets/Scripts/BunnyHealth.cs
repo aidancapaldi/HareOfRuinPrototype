@@ -11,7 +11,7 @@ public class BunnyHealth : MonoBehaviour
 
     public static bool isPlayerDead = false;
 
-    public static int currentHealth;
+    int currentHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -32,19 +32,6 @@ public class BunnyHealth : MonoBehaviour
         if (currentHealth > 0)
         {
             currentHealth -= damageAmount;
-            healthSlider.value = currentHealth;
-        } 
-        if (currentHealth <= 0) {
-            PlayerDies();
-        }
-    }
-
-    public void Heal(int healAmount)
-    {
-        // can't heal if invisible?
-        if (currentHealth > 0 && !BunnyInvisible.isInvisible)
-        {
-            currentHealth += healAmount;
             healthSlider.value = currentHealth;
         } 
         if (currentHealth <= 0) {

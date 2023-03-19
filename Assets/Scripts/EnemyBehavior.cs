@@ -22,7 +22,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         float step = moveSpeed * Time.deltaTime;
         float distance = Vector3.Distance(transform.position, player.position);
-        if (distance > minDistance && !BunnyInvisible.isInvisible) {
+        if (distance > minDistance) {
             transform.LookAt(player);
             transform.position = Vector3.MoveTowards(transform.position, player.position, step);
         }
@@ -33,7 +33,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            var BunnyHealth = other.GetComponent<BunnyHealth>();
+            var BunnyHealth = other.GetComponent<BunnyHealthNew>();
             BunnyHealth.TakeDamage(damageAmount);
         }
     }

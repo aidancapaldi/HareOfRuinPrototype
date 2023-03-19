@@ -23,9 +23,6 @@ public class ShootProjectile : MonoBehaviour
         {
             GameObject projectile = Instantiate(projectilePrefab,
                 transform.position + transform.forward, transform.rotation);
-                
-            projectile.transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
-
 
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
@@ -33,8 +30,6 @@ public class ShootProjectile : MonoBehaviour
 
             projectile.transform.SetParent(
                 GameObject.FindGameObjectWithTag("ProjectileParent").transform);
-
-            
 
             //AudioSource.PlayClipAtPoint(spellSFX, transform.position);
         }
