@@ -24,7 +24,7 @@ public class BunnyHeal : MonoBehaviour
 
     void FixedUpdate() {
         // Invisiblility 
-        if (Input.GetKeyDown(KeyCode.H)) {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
             // if (healTimes > 0 && !BunnyInvisible.isInvisible && BunnyHealth.currentHealth < 100) {
             if (healTimes > 0 && !BunnyInvisible.isInvisible && BunnyHealth.currentHealth < 100) {
                 healTimes -= 1;
