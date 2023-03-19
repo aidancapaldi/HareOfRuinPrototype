@@ -30,8 +30,6 @@ public class UISpellSlotNavigation : MonoBehaviour
     {
         for (int i = 0; i < hotBarKeys.Length; i++) {
             if (Input.GetKeyDown(hotBarKeys[i])) {
-                
-
                 UnselectSlots();
                 SelectSlot(i);
                 return;
