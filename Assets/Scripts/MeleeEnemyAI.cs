@@ -120,7 +120,6 @@ public class MeleeEnemyAI : MonoBehaviour
 
         FaceTarget(nextDestination);
         anim.SetInteger("animState", 3);
-        EnemyAttackMelee();   
     }
 
     void UpdateDeadState() 
@@ -146,36 +145,38 @@ public class MeleeEnemyAI : MonoBehaviour
 
     void EnemyAttackMelee()
     {
-        
+        var BunnyHealth = player.gameObject.GetComponent<BunnyHealth>();
+        BunnyHealth.TakeDamage(damageAmount);
     }
 
-    private void OnCollisionEnter(Collision collision) 
-    {
-        if (collision.gameObject.CompareTag("Projectile"))
-        {
-            currentState = FSMStates.Dead;
-        }
-        if (collision.gameObject.CompareTag("Sword"))
-        {
-            Debug.Log("Swordhit");
-        }
+    // private void OnCollisionEnter(Collision collision) 
+    // {
+    //     if (collision.gameObject.CompareTag("Projectile"))
+    //     {
+    //         currentState = FSMStates.Dead;
+    //     }
+    //     if (collision.gameObject.CompareTag("Sword"))
+    //     {
+    //         Debug.Log("Swordhit");
+    //     }
 
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Hit");
-            var BunnyHealth = collision.gameObject.GetComponent<BunnyHealth>();
-            BunnyHealth.TakeDamage(damageAmount);
-        }
-    }
+    //     if (collision.gameObject.CompareTag("Player"))
+    //     {
+    //         var BunnyHealth = collision.gameObject.GetComponent<BunnyHealth>();
+    //         BunnyHealth.TakeDamage(damageAmount);
+    //     }
+    // }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Sword"))
+        if (other.CompareTag("Player"))
         {
-            // var BunnyHealth = other.GetComponent<BunnyHealth>();
-            // BunnyHealth.TakeDamage(damageAmount);
+            var BunnyHealth = other.GetComponent<BunnyHealth>();
+            BunnyHealth.TakeDamage(damageAmount);
+        }
+        if (other.CompareTag("Projectile"))
+        {
             currentState = FSMStates.Dead;
-            Debug.Log("Swordhit");
         }
     }
 }
