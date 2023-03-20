@@ -46,9 +46,8 @@ public class BunnyHealth : MonoBehaviour
         {
             currentHealth += healAmount;
             healthSlider.value = currentHealth;
-        }
-        if (currentHealth <= 0)
-        {
+        } 
+        if (currentHealth <= 0) {
             PlayerDies();
         }
     }

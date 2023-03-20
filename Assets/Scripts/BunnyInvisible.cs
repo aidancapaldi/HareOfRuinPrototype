@@ -37,7 +37,7 @@ public class BunnyInvisible : MonoBehaviour
     void FixedUpdate() {
         // Invisiblility 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            if (invisibleTimes > 0 && !isInvisible) {
+            if ( !isInvisible) {
                 invisibleTimes -= 1;
                 isInvisible = true;
                 invisibleCountDown = 5; //invisible for 5 seconds

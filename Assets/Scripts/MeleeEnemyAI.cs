@@ -162,6 +162,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Hit");
             var BunnyHealth = collision.gameObject.GetComponent<BunnyHealth>();
             BunnyHealth.TakeDamage(damageAmount);
         }
