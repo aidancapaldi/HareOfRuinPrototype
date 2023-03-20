@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Playgrounds/Aidan Playground.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Levels/CutScene.unity
+    guid: 9ff791b38942b40208f2140370c554aa
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 1.unity
+    guid: 4fdcee34b411a42f998bc9ded9984ee8
   m_configObjects: {}

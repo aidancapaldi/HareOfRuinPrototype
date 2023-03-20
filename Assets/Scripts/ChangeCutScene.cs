@@ -59,6 +59,7 @@ public class ChangeCutScene : MonoBehaviour
                 GetComponent<Image>().sprite = cutScene9;
                 imgNumberCount++;
                 imgNumberCount = 0; //Reset it to 0
+                FindObjectOfType<LevelManager>().LoadNextLevel(); 
                 break;
             default:
                 Debug.Log("Error");
