@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class BunnyHealthNew : MonoBehaviour
 {
@@ -30,7 +29,7 @@ public class BunnyHealthNew : MonoBehaviour
     {
         currentHealth = startingHealth;
         //healthSlider.value = currentHealth;
-        isPlayerDead = false;
+        //isPlayerDead = false;
     }
 
     // Update is called once per frame

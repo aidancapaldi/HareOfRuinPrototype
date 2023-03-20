@@ -15,6 +15,7 @@ TagManager:
   - CasterWandTip
   - EnemyProjectile
   - WanderPointMelee
+  - HealthBar
   layers:
   - Default
   - TransparentFX
