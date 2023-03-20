@@ -31,8 +31,8 @@ public class ShootProjectile : MonoBehaviour
 
             rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
 
-            projectile.transform.SetParent(
-                GameObject.FindGameObjectWithTag("ProjectileParent").transform);
+            // projectile.transform.SetParent(
+            //     GameObject.FindGameObjectWithTag("ProjectileParent").transform);
 
             
 

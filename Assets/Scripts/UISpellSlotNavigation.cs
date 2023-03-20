@@ -28,24 +28,48 @@ public class UISpellSlotNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < hotBarKeys.Length; i++) {
-            if (Input.GetKeyDown(hotBarKeys[i])) {
-                UnselectSlots();
-                SelectSlot(i);
-                return;
-            }
+        // for (int i = 0; i < hotBarKeys.Length; i++) {
+        //     if (Input.GetKeyDown(hotBarKeys[i])) {
+        //         UnselectSlots();
+        //         SelectSlot(i);
+        //         return;
+        //     }
+        // }
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = selectedColor;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = selectedColor;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = selectedColor;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = selectedColor;
         }
     }
 
     // Unhighlight the spells slots.
-    void UnselectSlots() {
-        for (int i = 0; i < hotBarKeys.Length; i++) {
-            hotBarSlots[i].GetComponent<Image>().color = Color.white;
-        }
-    }
+    // void UnselectSlots() {
+    //     for (int i = 0; i < hotBarKeys.Length; i++) {
+    //         hotBarSlots[i].GetComponent<Image>().color = Color.white;
+    //     }
+    // }
 
-    // Highlight the given slot.
-    void SelectSlot(int whichSlot) {
-        hotBarSlots[whichSlot].GetComponent<Image>().color = selectedColor;
-    }
+    // // Highlight the given slot.
+    // void SelectSlot(int whichSlot) {
+    //     hotBarSlots[whichSlot].GetComponent<Image>().color = selectedColor;
+    // }
 }
