@@ -136,7 +136,7 @@ public class CasterEnemyAI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collided with " + collision.gameObject.ToString());
+        //Debug.Log("Collided with " + collision.gameObject.ToString());
         if (collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Sword"))
         {
             currentState = FSMStates.Dead;

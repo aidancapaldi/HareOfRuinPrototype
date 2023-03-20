@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8165381099199781238}
   m_Layer: 0
   m_Name: CarrotSword
-  m_TagString: Projectile
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7002,8 +7002,8 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821316483367074167}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.40170434
   m_Center: {x: 0.009362347, y: 0.36455992, z: -0.011092104}

@@ -29,7 +29,13 @@ public class BunnyAnimationRules : MonoBehaviour
                     PlaySomething("Run"); 
                 } else if ((Input.GetKey("w") || Input.GetKey("a") ||  Input.GetKey("s") ||  Input.GetKey("d"))) {
                     PlaySomething("Walk");
-                } else {
+                } else if ((Input.GetKey("h") && (BunnyHeal.healTimes > 0) && (!BunnyInvisible.isInvisible))) {
+                    PlaySomething("Spin");
+                } else if ((Input.GetKey("c"))) {
+                    sword.active = true; 
+                    PlaySomething("Clicked");
+                }
+                else {
                     PlaySomething("Idle A");
                 }
             }        

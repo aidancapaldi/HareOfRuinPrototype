@@ -28,7 +28,7 @@ public class BunnyInvisible : MonoBehaviour
         else {
             invisibleCountDown = 0;
             isInvisible = false;
-            Debug.Log("Invisible? " + isInvisible);
+            //Debug.Log("Invisible? " + isInvisible);
         }
 
 
@@ -41,7 +41,7 @@ public class BunnyInvisible : MonoBehaviour
                 invisibleTimes -= 1;
                 isInvisible = true;
                 invisibleCountDown = 5; //invisible for 5 seconds
-                Debug.Log("Invisible? " + isInvisible);
+                //Debug.Log("Invisible? " + isInvisible);
             }
         }
 

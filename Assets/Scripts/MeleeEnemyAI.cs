@@ -149,12 +149,32 @@ public class MeleeEnemyAI : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision) 
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            currentState = FSMStates.Dead;
+        }
+        if (collision.gameObject.CompareTag("Sword"))
+        {
+            Debug.Log("Swordhit");
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            var BunnyHealth = collision.gameObject.GetComponent<BunnyHealth>();
+            BunnyHealth.TakeDamage(damageAmount);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Sword"))
         {
-            var BunnyHealth = other.GetComponent<BunnyHealth>();
-            BunnyHealth.TakeDamage(damageAmount);
+            // var BunnyHealth = other.GetComponent<BunnyHealth>();
+            // BunnyHealth.TakeDamage(damageAmount);
+            currentState = FSMStates.Dead;
+            Debug.Log("Swordhit");
         }
     }
 }
