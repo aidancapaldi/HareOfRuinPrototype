@@ -169,6 +169,10 @@ public class MeleeEnemyAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Sword"))
+        {
+            currentState = FSMStates.Dead;
+        }
         if (other.CompareTag("Player"))
         {
             var BunnyHealth = other.GetComponent<BunnyHealth>();
@@ -178,5 +182,6 @@ public class MeleeEnemyAI : MonoBehaviour
         {
             currentState = FSMStates.Dead;
         }
+
     }
 }
