@@ -142,6 +142,13 @@ public class CasterEnemyAI : MonoBehaviour
             currentState = FSMStates.Dead;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Sword"))
+        {
+            currentState = FSMStates.Dead;
+        }
+    }
 
     void FindNextPoint()
     {
