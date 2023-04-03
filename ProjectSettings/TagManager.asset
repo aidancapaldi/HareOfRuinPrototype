@@ -20,11 +20,12 @@ TagManager:
   - S2
   - S3
   - S4
+  - Laser
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Glow
   - Water
   - UI
   - 
