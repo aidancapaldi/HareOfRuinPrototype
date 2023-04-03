@@ -25,25 +25,32 @@ public class BunnyAnimationRules : MonoBehaviour
 
         if (!BunnyHealth.isPlayerDead) {
             if (Input.GetKey(KeyCode.Space)) {
-                PlaySomething("Jump");
+                //PlaySomething("Jump");
+                m_Animator.SetInteger("animState", 1);
             } else {
                 if ((Input.GetKey("w") || Input.GetKey("a") ||  Input.GetKey("s") ||  Input.GetKey("d"))
                    && (Input.GetKey(KeyCode.LeftShift))) { 
-                    PlaySomething("Run"); 
+                    //PlaySomething("Run"); 
+                    m_Animator.SetInteger("animState", 3);
                 } else if ((Input.GetKey("w") || Input.GetKey("a") ||  Input.GetKey("s") ||  Input.GetKey("d"))) {
-                    PlaySomething("Walk");
+                    //PlaySomething("Walk");
+                    m_Animator.SetInteger("animState", 2);
                 } else if ((Input.GetKey(KeyCode.Alpha1) && (BunnyHeal.healTimes > 0) && (!BunnyInvisible.isInvisible))) {
-                    PlaySomething("Spin");
+                    //PlaySomething("Spin");
+                    m_Animator.SetInteger("animState", 5);
                 } else if ((Input.GetKey(KeyCode.Alpha3))) {
                     sword.active = true; 
-                    PlaySomething("Clicked");
+                    //PlaySomething("Clicked");
+                    m_Animator.SetInteger("animState", 4);
                 }
                 else {
-                    PlaySomething("Idle A");
+                    //PlaySomething("Idle A");
+                    m_Animator.SetInteger("animState", 0);
                 }
             }        
         } else  {
-            PlaySomething("Death");
+            //PlaySomething("Death");
+            m_Animator.SetInteger("animState", 6);
         }
         
     }

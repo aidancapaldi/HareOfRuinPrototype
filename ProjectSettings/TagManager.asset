@@ -25,6 +25,7 @@ TagManager:
   - ShopMainItemDisplay
   - ShopItemsContainer
   - CoinText
+  - RabbitMat
   layers:
   - Default
   - TransparentFX

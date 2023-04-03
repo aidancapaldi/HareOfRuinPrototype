@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 80d2352dc1f0b1a4f88c4b7df07a95b2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - animal_parent: {instanceID: 0}
+  - dropdownAnimal: {instanceID: 0}
+  - dropdownAnimation: {instanceID: 0}
+  - dropdownFacialExp: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

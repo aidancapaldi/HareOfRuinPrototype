@@ -34,14 +34,15 @@ public class BunnyMovementRules : MonoBehaviour
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         
             if (Input.GetKey(KeyCode.LeftShift)) {
-                controller.Move(move * Time.deltaTime * playerSpeed * 2);
+                controller.Move(-move * Time.deltaTime * playerSpeed * 2);
             } else {
-                controller.Move(move * Time.deltaTime * playerSpeed);
+                controller.Move(-move * Time.deltaTime * playerSpeed);
             }
+            
 
             if (move != Vector3.zero)
             {
-                gameObject.transform.forward = move;
+                gameObject.transform.forward = -move;
             }
 
             // Changes the height position of the player..
