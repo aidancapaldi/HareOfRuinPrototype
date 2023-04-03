@@ -31,6 +31,7 @@ public class CasterEnemyAI : MonoBehaviour
     Animator anim;
     float distanceToPlayer;
     float elapsedTime = 0;
+    public AudioClip casterSFX;
 
     int currentDestinationIndex = 0;
 
@@ -168,6 +169,7 @@ public class CasterEnemyAI : MonoBehaviour
     {
         if (elapsedTime >= shootRate) {
             var animDuration = anim.GetCurrentAnimatorStateInfo(0).length;
+
             Invoke("SpellCasting", animDuration);
             elapsedTime = 0.0f;
         }
@@ -180,6 +182,8 @@ public class CasterEnemyAI : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
+        
+        AudioSource.PlayClipAtPoint(casterSFX, Camera.main.transform.position);
 
         projectile.transform.SetParent(
             GameObject.FindGameObjectWithTag("ProjectileParent").transform);

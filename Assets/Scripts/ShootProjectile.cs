@@ -8,7 +8,7 @@ public class ShootProjectile : MonoBehaviour
 
     public GameObject projectilePrefab;
     public float projectileSpeed = 100;
-    //public AudioClip spellSFX;
+    public AudioClip projectileSFX;
 
 
     // Start is called before the first frame update
@@ -36,7 +36,7 @@ public class ShootProjectile : MonoBehaviour
 
             
 
-            //AudioSource.PlayClipAtPoint(spellSFX, transform.position);
+            AudioSource.PlayClipAtPoint(projectileSFX, transform.position);
         }
     }
 

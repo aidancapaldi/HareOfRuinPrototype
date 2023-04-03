@@ -10,6 +10,7 @@ public class BunnyInvisible : MonoBehaviour
     public static bool isInvisible = false;
     public float invisibleCountDown;
     public float invisibleTimes = 300; 
+    public AudioClip invisibleSFX;
 
     public int moveSpeed = 2;  // Units per second
 
@@ -40,6 +41,7 @@ public class BunnyInvisible : MonoBehaviour
             if ( !isInvisible) {
                 invisibleTimes -= 1;
                 isInvisible = true;
+                AudioSource.PlayClipAtPoint(invisibleSFX, Camera.main.transform.position);
                 invisibleCountDown = 5; //invisible for 5 seconds
                 //Debug.Log("Invisible? " + isInvisible);
             }
