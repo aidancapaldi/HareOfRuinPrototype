@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"E:/GameProgrammingWorkspace/hareofruin/FinalAlphaWebGL;E:/GameProgrammingWorkspace/hareofruin/526;E:/GameProgrammingWorkspace/hareofruin/517;E:/GameProgrammingWorkspace/hareofruin/buil;E:/GameProgrammingWorkspace/hareofruin/o;E:/GameProgrammingWorkspace/hareofruin/HardStop;E:/GameProgrammingWorkspace/hareofruin/wbgl;/Users/sadielevy/HareOfRuinPrototype/WebGL Builds;E:/GameProgrammingWorkspace/First Level Prototype-20230220T221729Z-001/First Level Prototype/WebGL Builds;\"}"
+                "value": "{\"m_Value\":\"E:/GameProgrammingWorkspace/hareofruinReClone/webglbuilds;E:/GameProgrammingWorkspace/hareofruin/FinalAlphaWebGL;E:/GameProgrammingWorkspace/hareofruin/526;E:/GameProgrammingWorkspace/hareofruin/517;E:/GameProgrammingWorkspace/hareofruin/buil;E:/GameProgrammingWorkspace/hareofruin/o;E:/GameProgrammingWorkspace/hareofruin/HardStop;E:/GameProgrammingWorkspace/hareofruin/wbgl;/Users/sadielevy/HareOfRuinPrototype/WebGL Builds;E:/GameProgrammingWorkspace/First Level Prototype-20230220T221729Z-001/First Level Prototype/WebGL Builds\"}"
             }
         ]
     }
