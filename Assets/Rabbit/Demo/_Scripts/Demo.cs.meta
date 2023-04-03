@@ -3,11 +3,7 @@ guid: a7e76a4a4e5bb0e458a266391b5f9c63
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - animal_parent: {instanceID: 0}
-  - dropdownAnimal: {instanceID: 0}
-  - dropdownAnimation: {instanceID: 0}
-  - dropdownFacialExp: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

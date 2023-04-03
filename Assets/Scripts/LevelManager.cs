@@ -44,6 +44,8 @@ public class LevelManager : MonoBehaviour
         t += 1; 
         t /= 2;
         gameText.color = Color.Lerp(Color.magenta, Color.yellow, t);
+
+        
     }
 
     private void OnGUI()
@@ -75,8 +77,12 @@ public class LevelManager : MonoBehaviour
         
         gameText.gameObject.SetActive(true);
 
+      
         Camera.main.GetComponent<AudioSource>().pitch = 2;
         AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
+
+        
+        
 
         if (!string.IsNullOrEmpty(nextLevel)) {
             Invoke("LoadNextLevel", 2);
@@ -93,4 +99,6 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+   
 }

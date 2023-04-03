@@ -16,54 +16,64 @@ public class ChangeCutScene : MonoBehaviour
     public Sprite cutScene9;
 
 
+    public static bool isCutSceneOver = false;
 
-
-    public int imgNumberCount;
+    public int i = 0;
 
 
     public void changeImages() // make sure to attach this to event trigger
     {
-        switch (imgNumberCount)
+        //int i = imgNumberCount;
+        switch (i)
         {
 
          
             case 0:
                 GetComponent<Image>().sprite = cutScene2;
-                imgNumberCount++;
+                i++;
                 break;
             case 1:
                 GetComponent<Image>().sprite = cutScene3;
-                imgNumberCount++;
+                i++;
                 break;
             case 2:
+                print("cutscene3");
                 GetComponent<Image>().sprite = cutScene4;
-                imgNumberCount++;
+                i++;
                 break;
             case 3:
                 GetComponent<Image>().sprite = cutScene5;
-                imgNumberCount++;
+                i++;
                 break;
             case 4:
                 GetComponent<Image>().sprite = cutScene6;
-                imgNumberCount++;
+                i++;
                 break;
             case 5:
                 GetComponent<Image>().sprite = cutScene7;
-                imgNumberCount++;
+                i++;
                 break;
             case 6:
                 GetComponent<Image>().sprite = cutScene8;
-                imgNumberCount++;
+                i++;
                 break;
             case 7:
                 GetComponent<Image>().sprite = cutScene9;
-                imgNumberCount++;
-                imgNumberCount = 0; //Reset it to 0
-                FindObjectOfType<LevelManager>().LoadNextLevel(); 
+                i++;
+                isCutSceneOver = true;
+                Invoke("CutSceneOver", 3);
+
+                //i = 0; //Reset it to 0
                 break;
             default:
                 Debug.Log("Error");
                 break;
         }
+    }
+
+public void CutSceneOver()
+    {
+        FindObjectOfType<CutSceneLevelManager>().LoadNextLevel();
+
     }
 }

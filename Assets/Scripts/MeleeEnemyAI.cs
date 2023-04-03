@@ -40,9 +40,17 @@ public class MeleeEnemyAI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+
+      
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        switch(currentState)
+
+        if (EnemyHealth.isDead == true)
+        {
+            currentState = FSMStates.Dead;
+        }
+
+        switch (currentState)
         {
             case FSMStates.Patrol:
                 UpdatePatrolState();
@@ -58,6 +66,9 @@ public class MeleeEnemyAI : MonoBehaviour
                 break;            
         }
         elapsedTime += Time.deltaTime;
+
+       
+
     }
 
     private void Initialize() {
@@ -87,39 +98,60 @@ public class MeleeEnemyAI : MonoBehaviour
 
     void UpdateChaseState() 
     {
-        anim.SetInteger("animState", 2);
-
-        nextDestination = player.transform.position;
-
-        if (distanceToPlayer <= attackDistance)
+        if (!BunnyInvisible.isInvisible)
         {
-            currentState = FSMStates.Attack;
-        } else if (distanceToPlayer > chaseDistance) {
-            currentState = FSMStates.Patrol;
+
+            anim.SetInteger("animState", 2);
+
+            nextDestination = player.transform.position;
+
+            if (distanceToPlayer <= attackDistance)
+            {
+                currentState = FSMStates.Attack;
+            }
+            else if (distanceToPlayer > chaseDistance)
+            {
+                currentState = FSMStates.Patrol;
+            }
+
+            FaceTarget(nextDestination);
+
+            transform.position = Vector3.MoveTowards(transform.position, nextDestination,
+               enemySpeed * Time.deltaTime);
         }
-
-        FaceTarget(nextDestination);
-
-        transform.position = Vector3.MoveTowards(transform.position, nextDestination,
-           enemySpeed * Time.deltaTime);
+        else
+        {
+            UpdatePatrolState();
+        }
     }
 
     void UpdateAttackState() 
     {
-        nextDestination = player.transform.position;
+        if (!BunnyInvisible.isInvisible)
+        {
 
-        if (distanceToPlayer <= attackDistance)
-        {
-            currentState = FSMStates.Attack;
-        } else if (distanceToPlayer > attackDistance && distanceToPlayer <= chaseDistance)
-        {
-            currentState = FSMStates.Chase;
-        } else if (distanceToPlayer > chaseDistance) {
-            currentState = FSMStates.Patrol;
+            nextDestination = player.transform.position;
+
+            if (distanceToPlayer <= attackDistance)
+            {
+                currentState = FSMStates.Attack;
+            }
+            else if (distanceToPlayer > attackDistance && distanceToPlayer <= chaseDistance)
+            {
+                currentState = FSMStates.Chase;
+            }
+            else if (distanceToPlayer > chaseDistance)
+            {
+                currentState = FSMStates.Patrol;
+            }
+
+            FaceTarget(nextDestination);
+            anim.SetInteger("animState", 3);
         }
-
-        FaceTarget(nextDestination);
-        anim.SetInteger("animState", 3);
+        else
+        {
+            UpdatePatrolState();
+        }
     }
 
     void UpdateDeadState() 
@@ -169,19 +201,20 @@ public class MeleeEnemyAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Sword"))
-        {
-            currentState = FSMStates.Dead;
-        }
         if (other.CompareTag("Player"))
         {
             var BunnyHealth = other.GetComponent<BunnyHealth>();
             BunnyHealth.TakeDamage(damageAmount);
         }
-        if (other.CompareTag("Projectile"))
-        {
-            currentState = FSMStates.Dead;
-        }
 
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    //Debug.Log("Collided with " + collision.gameObject.ToString());
+    //    if (EnemyHealth.isDead == true)
+    //    {
+    //        currentState = FSMStates.Dead;
+    //    }
+    //}
 }

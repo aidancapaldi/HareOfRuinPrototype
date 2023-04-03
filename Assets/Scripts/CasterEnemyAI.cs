@@ -45,7 +45,13 @@ public class CasterEnemyAI : MonoBehaviour
     void Update()
     { 
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        switch(currentState)
+
+        if (EnemyHealth.isDead == true)
+        {
+            currentState = FSMStates.Dead;
+        }
+
+        switch (currentState)
         {
             case FSMStates.Patrol:
                 UpdatePatrolState();
@@ -92,40 +98,60 @@ public class CasterEnemyAI : MonoBehaviour
 
     void UpdateChaseState() 
     {
-        anim.SetInteger("animState", 2);
-
-        nextDestination = player.transform.position;
-
-        if (distanceToPlayer <= attackDistance)
+        if (!BunnyInvisible.isInvisible)
         {
-            currentState = FSMStates.Attack;
-        } else if (distanceToPlayer > chaseDistance) {
-            currentState = FSMStates.Patrol;
+
+            anim.SetInteger("animState", 2);
+
+            nextDestination = player.transform.position;
+
+            if (distanceToPlayer <= attackDistance)
+            {
+                currentState = FSMStates.Attack;
+            }
+            else if (distanceToPlayer > chaseDistance)
+            {
+                currentState = FSMStates.Patrol;
+            }
+
+            FaceTarget(nextDestination);
+
+            transform.position = Vector3.MoveTowards(transform.position, nextDestination,
+               enemySpeed * Time.deltaTime);
         }
-
-        FaceTarget(nextDestination);
-
-        transform.position = Vector3.MoveTowards(transform.position, nextDestination,
-           enemySpeed * Time.deltaTime);
+        else
+        {
+            UpdatePatrolState();
+        }
     }
 
     void UpdateAttackState() 
     {
-        nextDestination = player.transform.position;
+        if (!BunnyInvisible.isInvisible)
+        {
+            nextDestination = player.transform.position;
 
-        if (distanceToPlayer <= attackDistance)
-        {
-            currentState = FSMStates.Attack;
-        } else if (distanceToPlayer > attackDistance && distanceToPlayer <= chaseDistance)
-        {
-            currentState = FSMStates.Chase;
-        } else if (distanceToPlayer > chaseDistance) {
-            currentState = FSMStates.Patrol;
+            if (distanceToPlayer <= attackDistance)
+            {
+                currentState = FSMStates.Attack;
+            }
+            else if (distanceToPlayer > attackDistance && distanceToPlayer <= chaseDistance)
+            {
+                currentState = FSMStates.Chase;
+            }
+            else if (distanceToPlayer > chaseDistance)
+            {
+                currentState = FSMStates.Patrol;
+            }
+
+            FaceTarget(nextDestination);
+            anim.SetInteger("animState", 3);
+            EnemySpellCast();
         }
-
-        FaceTarget(nextDestination);
-        anim.SetInteger("animState", 3);
-        EnemySpellCast();   
+        else
+        {
+            UpdatePatrolState();
+        }
     }
 
     void UpdateDeadState() 
@@ -134,21 +160,7 @@ public class CasterEnemyAI : MonoBehaviour
         Destroy(gameObject, 1f);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log("Collided with " + collision.gameObject.ToString());
-        if (collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Sword"))
-        {
-            currentState = FSMStates.Dead;
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Sword"))
-        {
-            currentState = FSMStates.Dead;
-        }
-    }
+  
 
     void FindNextPoint()
     {
