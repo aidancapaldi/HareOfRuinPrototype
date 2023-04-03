@@ -45,7 +45,8 @@ public class MeleeEnemyAI : MonoBehaviour
       
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        if (EnemyHealth.isDead == true)
+        bool e = gameObject.GetComponent<EnemyHealth>().isDead;
+        if (e == true)
         {
             currentState = FSMStates.Dead;
         }

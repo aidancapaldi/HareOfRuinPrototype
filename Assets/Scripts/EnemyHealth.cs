@@ -15,7 +15,7 @@ public class EnemyHealth : MonoBehaviour
     public int SwordDamage = 20;
     public int LaserDamage = 5;
 
-    public static bool isDead = false;
+    public bool isDead = false;
 
     void Awake()
     {
