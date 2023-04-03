@@ -8509,7 +8509,7 @@ PrefabInstance:
       objectReference: {fileID: 1337471905}
     - target: {fileID: 8458776873020931970, guid: b108f69dc4cfaae4783975eea56c0f18, type: 3}
       propertyPath: m_VersionIndex
-      value: 437
+      value: 443
       objectReference: {fileID: 0}
     - target: {fileID: 8458776873020931975, guid: b108f69dc4cfaae4783975eea56c0f18, type: 3}
       propertyPath: m_Mesh
@@ -8550,6 +8550,7 @@ MonoBehaviour:
   invisibleTimes: 300
   invisibleReset: 10
   moveSpeed: 2
+  invisibleSFX: {fileID: 0}
 --- !u!114 &348464788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8565,6 +8566,7 @@ MonoBehaviour:
   healCountDown: 0
   bunnyHeal: {fileID: 5457471438118595529, guid: 824f5664bac8a4f40a711ad7c95fdcc3, type: 3}
   healAmount: 10
+  healSFX: {fileID: 0}
 --- !u!4 &348464795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7341787111896886410, guid: b108f69dc4cfaae4783975eea56c0f18, type: 3}
@@ -27223,6 +27225,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1914194353}
+    - target: {fileID: 2643512919029332427, guid: e7d2102e8e5c9444eb82302e040ea2e9, type: 3}
+      propertyPath: m_VersionIndex
+      value: 443
+      objectReference: {fileID: 0}
     - target: {fileID: 2643512919029332430, guid: e7d2102e8e5c9444eb82302e040ea2e9, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -29955,7 +29961,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh77178
+  m_Name: pb_Mesh111718
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46391,7 +46397,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-61188
+  m_Name: pb_Mesh-102212
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48558,7 +48564,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-47482
+  m_Name: pb_Mesh-100420
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48873,6 +48879,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1930002908221719519, guid: 10193d5f7b0ba49479554c3d4b36a79c, type: 3}
+      propertyPath: casterSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e7fd4bf4dceac40ca9e557ba1e3110eb, type: 3}
     - target: {fileID: 1955763974951168316, guid: 10193d5f7b0ba49479554c3d4b36a79c, type: 3}
       propertyPath: m_Name
       value: FoxCasterSadie
@@ -50701,6 +50711,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1779645226, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
+      propertyPath: healSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: a77c55d6fe4e44b60964818c54b76eb7, type: 3}
+    - target: {fileID: 1779645227, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
+      propertyPath: invisibleSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 244c2d7128c2743c5988eb288e6bc9b3, type: 3}
+    - target: {fileID: 1919479363, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
+      propertyPath: spellSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e7fd4bf4dceac40ca9e557ba1e3110eb, type: 3}
+    - target: {fileID: 1919479391, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
+      propertyPath: swordSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ae5ffb08474bc447bb208b12e771713d, type: 3}
     - target: {fileID: 1919479391, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: bunColorSelected
       value: 
@@ -50767,7 +50793,7 @@ PrefabInstance:
       objectReference: {fileID: 1817768573}
     - target: {fileID: 8403094631320458118, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_VersionIndex
-      value: 437
+      value: 449
       objectReference: {fileID: 0}
     - target: {fileID: 8424046229895045276, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_Mesh

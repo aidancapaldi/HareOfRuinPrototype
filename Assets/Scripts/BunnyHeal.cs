@@ -8,6 +8,7 @@ public class BunnyHeal : MonoBehaviour
     public static float healTimes = 30; 
     public GameObject bunnyHeal;
     public int healAmount = 10;
+    public AudioClip healSFX;
 
 
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class BunnyHeal : MonoBehaviour
                 healTimes -= 1;
                 var BunnyHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<BunnyHealth>();
                 // BunnyHealth.Heal(healAmount);
+                AudioSource.PlayClipAtPoint(healSFX, Camera.main.transform.position);
                 Invoke("HealBunny", 2);
                 Instantiate(bunnyHeal, transform.position, transform.rotation);
             }

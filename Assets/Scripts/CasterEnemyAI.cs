@@ -31,6 +31,8 @@ public class CasterEnemyAI : MonoBehaviour
     Animator anim;
     float distanceToPlayer;
     float elapsedTime = 0;
+    public AudioClip casterSFX;
+
 
     int currentDestinationIndex = 0;
 
@@ -183,6 +185,8 @@ public class CasterEnemyAI : MonoBehaviour
             var animDuration = anim.GetCurrentAnimatorStateInfo(0).length;
             Invoke("SpellCasting", animDuration);
             elapsedTime = 0.0f;
+            AudioSource.PlayClipAtPoint(casterSFX, Camera.main.transform.position);
+
         }
     }
 

@@ -13,6 +13,7 @@ public class BunnyInvisible : MonoBehaviour
     public float invisibleReset = 10;
 
     public int moveSpeed = 2;  // Units per second
+    public AudioClip invisibleSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,7 @@ public class BunnyInvisible : MonoBehaviour
             {
                 invisibleTimes -= 1;
                 isInvisible = true;
+                AudioSource.PlayClipAtPoint(invisibleSFX, Camera.main.transform.position);
                 invisibleCountDown = 5; //invisible for 5 seconds
                 //Debug.Log("Invisible? " + isInvisible);
             }

@@ -7,12 +7,18 @@ public class BunnyAnimationRules : MonoBehaviour
     Animator m_Animator;
     GameObject sword;
     public Material bunColorSelected;
+    public AudioClip swordSFX;
+
+    bool playSword;
+    float countDown;
+
     // Start is called before the first frame update
     void Start()
     {
         m_Animator = GetComponent<Animator>();
 
         sword = GameObject.FindWithTag("Sword");
+        countDown = 1.0f;
     }
 
     // Update is called once per frame
@@ -21,11 +27,24 @@ public class BunnyAnimationRules : MonoBehaviour
         if (!BunnyInvisible.isInvisible) {
             GameObject.FindGameObjectWithTag("Rabbit").GetComponent<Renderer>().material = bunColorSelected;
         }
+
+        if (countDown > 0)
+        {
+            countDown -= Time.deltaTime;
+        }
+        else
+        {
+            countDown = 0;
+            playSword = false;
+            //Debug.Log("Invisible? " + isInvisible);
+        }
+        
     }
 
     void FixedUpdate() {
         m_Animator.GetComponent<Animator>().enabled = true;
         sword.active = false;
+
 
         if (!BunnyHealth.isPlayerDead) {
             if (Input.GetKey(KeyCode.Space)) {
@@ -43,7 +62,15 @@ public class BunnyAnimationRules : MonoBehaviour
                     //PlaySomething("Spin");
                     m_Animator.SetInteger("animState", 5);
                 } else if ((Input.GetKey(KeyCode.Alpha3))) {
-                    sword.active = true; 
+                    sword.active = true;
+                    if (!playSword) {
+                        //Invoke("PlaySound", 0.5f);
+                        AudioSource.PlayClipAtPoint(swordSFX, Camera.main.transform.position);
+                        playSword = true;
+                        countDown = 1.0f;
+                    }
+                    
+                    //AudioSource.PlayClipAtPoint(swordSFX, Camera.main.transform.position);
                     //PlaySomething("Clicked");
                     m_Animator.SetInteger("animState", 4);
                 }
@@ -57,6 +84,9 @@ public class BunnyAnimationRules : MonoBehaviour
             m_Animator.SetInteger("animState", 6);
         }
         
+    }
+
+    public void PlaySound(){
     }
 
     // Play the needed animation. 
