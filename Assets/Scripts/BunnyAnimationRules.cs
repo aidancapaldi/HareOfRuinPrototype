@@ -6,17 +6,21 @@ public class BunnyAnimationRules : MonoBehaviour
 {
     Animator m_Animator;
     GameObject sword;
+    public Material bunColorSelected;
     // Start is called before the first frame update
     void Start()
     {
         m_Animator = GetComponent<Animator>();
+
         sword = GameObject.FindWithTag("Sword");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!BunnyInvisible.isInvisible) {
+            GameObject.FindGameObjectWithTag("Rabbit").GetComponent<Renderer>().material = bunColorSelected;
+        }
     }
 
     void FixedUpdate() {

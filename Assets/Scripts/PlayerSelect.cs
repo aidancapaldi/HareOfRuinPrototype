@@ -11,7 +11,9 @@ public class PlayerSelect : MonoBehaviour {
 		"Red",
 		"Blue",
 		"Pink",
-		"Green"
+		"Green",
+		"White",
+		"Black"
 		};
 
 	[Space(10)]
@@ -19,7 +21,7 @@ public class PlayerSelect : MonoBehaviour {
 	public Transform animal_parent;
 	public Dropdown dropdownAnimal;
 
-	Material m_ObjectRenderer;
+	public Material m_ObjectRenderer;
 
 	void Start() {
 
@@ -75,21 +77,31 @@ public class PlayerSelect : MonoBehaviour {
 	}
 
 	void ChangeColor() {
-		GameObject r = GameObject.FindGameObjectWithTag("RabbitMat");
+		//GameObject r = GameObject.FindGameObjectWithTag("Player");
+		
 
+		
 		Color c = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 		if (dropdownAnimal.options[dropdownAnimal.value].text == "Red") {
-			c = new Color(1.0f, 0f, 0f, 1.0f);
+			c = new Color(0.9811321f, 0.3979869f, 0.3924528f, 0.5019608f);
 		} else if (dropdownAnimal.options[dropdownAnimal.value].text == "Green") {
-			c = new Color(0f, 1.0f, 0f, 1.0f);
+			c = new Color(0.3057371f, 0.8301887f, 0.2459238f, 0.5019608f);
 		} else if (dropdownAnimal.options[dropdownAnimal.value].text == "Pink") {
-			c = new Color(1.0f, 0f, 0.9362135f, 1.0f);
+			c = new Color(0.9310009f, 0.484158f, 0.9433962f, 0.5019608f);
 		} else if (dropdownAnimal.options[dropdownAnimal.value].text == "Blue") {
-			c = new Color(0f, 0f, 1.0f, 1.0f);
+			c = new Color(0.2267888f, 0.4107119f, 0.8773585f, 0.5019608f);
 		} else if (dropdownAnimal.options[dropdownAnimal.value].text == "Yellow") {
-			c = new Color(1.0f, 1.0f, 0f, 1.0f);
+			c = new Color(0.77248f, 0.8773585f, 0.2267888f, 0.5019608f);
 		}
-		r.GetComponent<Renderer>().material.color = c;
+		else if (dropdownAnimal.options[dropdownAnimal.value].text == "White") {
+			c = new Color(1.0f, 1.0f, 1.0f, 0.4705882f);
+		}
+		else if (dropdownAnimal.options[dropdownAnimal.value].text == "Black") {
+			c = new Color(0.03951583f, 0.0445089f, 0.09433959f, 0.4705882f);
+		}
+		m_ObjectRenderer.color = c;
+		GameObject.FindGameObjectWithTag("Rabbit").GetComponent<Renderer>().material = m_ObjectRenderer;
+		//r.GetComponent<Renderer>().material.color = c;
 	}
 	
 }

@@ -46104,7 +46104,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-12478
+  m_Name: pb_Mesh-182046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -50175,6 +50175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1919479391, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
+      propertyPath: bunColorSelected
+      value: 
+      objectReference: {fileID: 2100000, guid: 26f069665eacdc543a8984d73fb92fd8, type: 2}
     - target: {fileID: 7213942857215417518, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_Name
       value: PlayerRabbitNew
