@@ -20,6 +20,11 @@ TagManager:
   - S2
   - S3
   - S4
+  - Inventory
+  - Shop
+  - ShopMainItemDisplay
+  - ShopItemsContainer
+  - CoinText
   layers:
   - Default
   - TransparentFX

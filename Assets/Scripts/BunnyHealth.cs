@@ -67,42 +67,42 @@ public class BunnyHealth : MonoBehaviour
 
     public void ControlHealthBar()
     {
-        CurrentHealthBar = GameObject.FindGameObjectWithTag("HealthBar");
+        // CurrentHealthBar = GameObject.FindGameObjectWithTag("HealthBar");
 
-        if (currentHealth > 80)
-        {
-            CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot100;
-
-
-        }
-        else if (currentHealth > 60 && currentHealth <= 80)
-        {
-            CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot80;
-
-        }
-        else if (currentHealth > 40 && currentHealth <= 60)
-        {
-            CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot60;
+        // if (currentHealth > 80)
+        // {
+        //     CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot100;
 
 
-        }
-        else if (currentHealth > 20 && currentHealth <= 40)
-        {
-            CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot40;
+        // }
+        // else if (currentHealth > 60 && currentHealth <= 80)
+        // {
+        //     CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot80;
 
-        }
-        else if (currentHealth > 0 && currentHealth <= 20)
-        {
-            CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot20;
-
-
-        }
-        else if (currentHealth == 0)
-        {
-            CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot0;
+        // }
+        // else if (currentHealth > 40 && currentHealth <= 60)
+        // {
+        //     CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot60;
 
 
-        }
+        // }
+        // else if (currentHealth > 20 && currentHealth <= 40)
+        // {
+        //     CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot40;
+
+        // }
+        // else if (currentHealth > 0 && currentHealth <= 20)
+        // {
+        //     CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot20;
+
+
+        // }
+        // else if (currentHealth == 0)
+        // {
+        //     CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot0;
+
+
+        // }
 
     }
 
