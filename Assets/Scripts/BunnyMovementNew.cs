@@ -11,6 +11,7 @@ public class BunnyMovementNew : MonoBehaviour
     public float playerSpeed = 5.0f;
     public float jumpHeight = 2.0f;
     private float gravityValue = -9.81f;
+    private float turnSpeed = 2.0f;
 
     private void Start()
     {
@@ -31,19 +32,26 @@ public class BunnyMovementNew : MonoBehaviour
                 playerVelocity.y = 0f;
             }
 
-            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 move = new Vector3(0, 0, Input.GetAxis("Vertical"));
+
+            Vector3 rotate = new Vector3(Input.GetAxis("Vertical"), 0, 0);
         
             if (Input.GetKey(KeyCode.LeftShift)) {
-                controller.Move(-move * Time.deltaTime * playerSpeed * 2);
+                controller.Move(move * Time.deltaTime * playerSpeed * 2);
             } else {
-                controller.Move(-move * Time.deltaTime * playerSpeed);
+                controller.Move(move * Time.deltaTime * playerSpeed);
             }
+
+            if (Input.GetKey(KeyCode.A))
+                transform.Rotate(Vector3.up * turnSpeed);
+            if (Input.GetKey(KeyCode.D))
+                transform.Rotate(Vector3.down * turnSpeed);
             
 
-            if (move != Vector3.zero)
-            {
-                gameObject.transform.forward = -move;
-            }
+            // if (move != Vector3.zero)
+            // {
+            //     gameObject.transform.forward = move;
+            // }
 
             // Changes the height position of the player..
             if (Input.GetButtonDown("Jump") && groundedPlayer)
