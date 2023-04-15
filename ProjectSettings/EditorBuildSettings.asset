@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Playgrounds/Aidan Playground.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Playgrounds/MainMenu.unity
+    guid: 1017a15cc44b24cbebded7140f256f0e
+  - enabled: 1
     path: Assets/Scenes/Levels/CutScene.unity
     guid: 9ff791b38942b40208f2140370c554aa
   - enabled: 1
@@ -20,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level 2.unity
     guid: cf331d9bf21fa4a77896dffdc59c04ec
+  - enabled: 1
+    path: Assets/Scenes/Playgrounds/Credits.unity
+    guid: 08f02bb8bbf564c69a2a7e90f7a1a49a
   m_configObjects: {}
