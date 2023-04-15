@@ -22,6 +22,10 @@ public class UISpellSlotNavigation : MonoBehaviour
     {
         hotBarSlots = GameObject.FindGameObjectsWithTag("HotBarSlot");
         hotBarKeys = new KeyCode[] {KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4};
+        GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.clear;
+        GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.clear;
+        GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.clear;
+        GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.clear;
         selectedColor = new Color(1f, 0f, .7f, .6f);
     }
 
@@ -36,27 +40,27 @@ public class UISpellSlotNavigation : MonoBehaviour
         //     }
         // }
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
-                GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.white;
+                GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.clear;
                 GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = selectedColor;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.white;
+            GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.clear;
                 GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = selectedColor;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.white;
+            GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = Color.clear;
                 GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = selectedColor;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.white;
-                GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.white;
+            GameObject.FindGameObjectWithTag("S3").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S2").GetComponent<Image>().color = Color.clear;
+                GameObject.FindGameObjectWithTag("S1").GetComponent<Image>().color = Color.clear;
                 GameObject.FindGameObjectWithTag("S4").GetComponent<Image>().color = selectedColor;
         }
     }
