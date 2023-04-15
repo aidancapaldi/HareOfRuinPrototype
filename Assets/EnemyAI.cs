@@ -27,6 +27,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject deadVFX;
     public float projectileSpeed = 100;
     public int damageAmount = 20;
+    public GameObject dagger;
 
 
     GameObject[] wanderPoints;
@@ -116,6 +117,11 @@ public class EnemyAI : MonoBehaviour
             currentState = FSMStates.Chase;
         }
 
+
+        //remove later
+        Invoke("FallingObjects", 3);
+
+
         FaceTarget(nextDestination);
 
         agent.SetDestination(nextDestination);
@@ -160,10 +166,16 @@ public class EnemyAI : MonoBehaviour
         }
 
         FaceTarget(nextDestination);
-        anim.SetInteger("animState", 3);
+        // anim.SetInteger("animState", 3);
+        
+        //bounce
+        anim.SetInteger("animState", 5);
+
         // attack will be bounce then objects fall
 
         // Invoke("SpellCasting", 3);
+        Invoke("FallingObjects", 3);
+
     }
 
     void UpdateDeadState() {
@@ -210,6 +222,33 @@ public class EnemyAI : MonoBehaviour
     //     }
 
     // }
+
+    void FallingObjects() {
+
+        float xMin = -20;
+        float xMax = -30;
+        float zMin = -3;
+        float zMax = 7;
+
+        if(!isDead) {
+            int numOfDaggers = 3;
+            while (numOfDaggers <= 3) {
+                Vector3 daggerPosition;
+
+                daggerPosition.x = Random.Range(xMin, xMax);
+                // should appear from the ceiling
+                daggerPosition.y = 5;
+                daggerPosition.z = Random.Range(zMin, zMax);
+
+                dagger.transform.position = daggerPosition;
+        
+                Instantiate(dagger, dagger.transform.position, dagger.transform.rotation);
+                numOfDaggers = numOfDaggers - 1;
+
+            }
+
+        }
+    }
 
 
     private void OnDrawGizmos() {
