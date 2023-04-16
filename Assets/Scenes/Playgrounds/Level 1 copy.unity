@@ -7323,7 +7323,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh687520
+  m_Name: pb_Mesh816160
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11964,7 +11964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &589742965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11981,7 +11981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -574, y: 195.5}
+  m_AnchoredPosition: {x: -430.9, y: 195.5}
   m_SizeDelta: {x: 450, y: 475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589742966
@@ -12028,7 +12028,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh689320
+  m_Name: pb_Mesh817722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14478,7 +14478,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-563660
+  m_Name: pb_Mesh-702392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19400,7 +19400,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-565916
+  m_Name: pb_Mesh-690924
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20618,7 +20618,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-566390
+  m_Name: pb_Mesh-691826
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26178,7 +26178,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh688988
+  m_Name: pb_Mesh817456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27915,7 +27915,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh689398
+  m_Name: pb_Mesh817800
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31451,7 +31451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1510072580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43968,7 +43968,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-566140
+  m_Name: pb_Mesh-691148
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -50788,6 +50788,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1916688755033482031, guid: 90606e850ac0945248925a1dcf20eef1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15.000015
+      objectReference: {fileID: 0}
     - target: {fileID: 1916688755350023402, guid: 90606e850ac0945248925a1dcf20eef1, type: 3}
       propertyPath: m_Name
       value: Inventory/Shop Canvas

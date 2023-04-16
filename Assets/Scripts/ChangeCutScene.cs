@@ -14,6 +14,11 @@ public class ChangeCutScene : MonoBehaviour
     public Sprite cutScene7;
     public Sprite cutScene8;
     public Sprite cutScene9;
+    public Sprite cutscenenew00;
+    public Sprite cutscenenew1;
+    public Sprite cutscenenew;
+
+
 
 
     public static bool isCutSceneOver = false;
@@ -26,38 +31,48 @@ public class ChangeCutScene : MonoBehaviour
         //int i = imgNumberCount;
         switch (i)
         {
-
-         
             case 0:
-                GetComponent<Image>().sprite = cutScene2;
+                GetComponent<Image>().sprite = cutscenenew00;
                 i++;
                 break;
             case 1:
-                GetComponent<Image>().sprite = cutScene3;
+                GetComponent<Image>().sprite = cutscenenew1;
                 i++;
                 break;
             case 2:
+                GetComponent<Image>().sprite = cutscenenew;
+                i++;
+                break;
+            case 3:
+                GetComponent<Image>().sprite = cutScene2;
+                i++;
+                break;
+            case 4:
+                GetComponent<Image>().sprite = cutScene3;
+                i++;
+                break;
+            case 5:
                 print("cutscene3");
                 GetComponent<Image>().sprite = cutScene4;
                 i++;
                 break;
-            case 3:
+            case 6:
                 GetComponent<Image>().sprite = cutScene5;
                 i++;
                 break;
-            case 4:
+            case 7:
                 GetComponent<Image>().sprite = cutScene6;
                 i++;
                 break;
-            case 5:
+            case 8:
                 GetComponent<Image>().sprite = cutScene7;
                 i++;
                 break;
-            case 6:
+            case 9:
                 GetComponent<Image>().sprite = cutScene8;
                 i++;
                 break;
-            case 7:
+            case 10:
                 GetComponent<Image>().sprite = cutScene9;
                 i++;
                 isCutSceneOver = true;
