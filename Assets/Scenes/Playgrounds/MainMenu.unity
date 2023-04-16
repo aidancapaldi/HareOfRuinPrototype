@@ -777,9 +777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 232f64210a91d4deebfd77b3a171f9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiesKilledText: {fileID: 1506203095597576901}
-  enemyKillNum: 0
-  showEnemyKillNum: 0
 --- !u!1 &938462050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1435,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1506203096637440057, guid: fef1e0b078eed42b0be327f4cd7f7294, type: 3}
   m_PrefabInstance: {fileID: 1506203095597576900}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1308947198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308947196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fedf27474b3645218994c6ebe25cd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemiesKilledText: {fileID: 1506203095597576901}
+  enemyKillNum: 0
+  showEnemyKillNum: 0
 --- !u!1 &1335072124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2194,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 821027836}
     m_Modifications:
+    - target: {fileID: 25198948, guid: fef1e0b078eed42b0be327f4cd7f7294, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453160787, guid: fef1e0b078eed42b0be327f4cd7f7294, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717166190, guid: fef1e0b078eed42b0be327f4cd7f7294, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791865631525600, guid: fef1e0b078eed42b0be327f4cd7f7294, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2000
+      objectReference: {fileID: 0}
     - target: {fileID: 1506203096637440056, guid: fef1e0b078eed42b0be327f4cd7f7294, type: 3}
       propertyPath: m_Name
       value: ProgressMenu
