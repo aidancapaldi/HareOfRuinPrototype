@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BunnyHeal : MonoBehaviour
+public class BunnyHealNew : MonoBehaviour
 {
     public float healCountDown;
     public static float healTimes = 30; 
@@ -28,6 +28,9 @@ public class BunnyHeal : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             // if (healTimes > 0 && !BunnyInvisible.isInvisible && BunnyHealth.currentHealth < 100) {
             if (healTimes > 0 && !BunnyInvisible.isInvisible && BunnyHealth.currentHealth < 100) {
+                // acapaldi
+                // This doesn't cover for the case where health ~97, you can heal past 100
+                // Adding logic to stop this
                 healTimes -= 1;
                 var BunnyHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<BunnyHealth>();
                 // BunnyHealth.Heal(healAmount);
@@ -39,6 +42,13 @@ public class BunnyHeal : MonoBehaviour
     }
 
     void HealBunny() {
+        // Logic to stop overflow healing
+        var BunnyHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<BunnyHealth>();
+        if (BunnyHealth.currentHealth + healAmount > 100) {
+            // If we would have overhealed, cap it.
+            // E.g. invoked at 95 health should heal 5 (100 - curHealth) instead of 10 (healAmount)
+            healAmount = 100 - BunnyHealth.currentHealth;
+        }
         FindObjectOfType<BunnyHealth>().Heal(healAmount);
         // BunnyHealth.Heal(healAmount);
     }
