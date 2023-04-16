@@ -33,6 +33,8 @@ public class CasterEnemyAI : MonoBehaviour
     float elapsedTime = 0;
     public AudioClip casterSFX;
 
+    static public int deadEnemyCounter = 0;
+
 
     int currentDestinationIndex = 0;
 
@@ -45,13 +47,16 @@ public class CasterEnemyAI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
         bool e = gameObject.GetComponent<EnemyHealth>().isDead;
         if (e == true)
         {
             currentState = FSMStates.Dead;
+           
+
         }
 
         switch (currentState)
@@ -200,5 +205,12 @@ public class CasterEnemyAI : MonoBehaviour
 
         projectile.transform.SetParent(
             GameObject.FindGameObjectWithTag("ProjectileParent").transform);
+    }
+
+    private void OnDestroy()
+    {
+        int currentKillCount = PlayerPrefs.GetInt("enemyKillNumber", 0);
+        print(currentKillCount);
+        PlayerPrefs.SetInt("enemyKillNumber", currentKillCount + 1);
     }
 }

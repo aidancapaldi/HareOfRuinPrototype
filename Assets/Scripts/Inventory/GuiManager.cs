@@ -29,10 +29,12 @@ public class GuiManager : MonoBehaviour
             if (_uisRequiringCursorVisible == 0)
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                Time.timeScale = 1f;
             }
             else
             {
                 Cursor.lockState = CursorLockMode.None;
+                Time.timeScale = 0f;
             }
         }
     }
