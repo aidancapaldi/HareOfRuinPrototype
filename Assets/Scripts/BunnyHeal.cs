@@ -39,7 +39,7 @@ public class BunnyHeal : MonoBehaviour
     }
 
     void HealBunny() {
-        FindObjectOfType<BunnyHealth>().Heal(healAmount);;
+        FindObjectOfType<BunnyHealth>().Heal(healAmount);
         // BunnyHealth.Heal(healAmount);
     }
 }
