@@ -36,16 +36,31 @@ public class BunnyMovementNew : MonoBehaviour
 
             Vector3 rotate = new Vector3(Input.GetAxis("Vertical"), 0, 0);
         
-            if (Input.GetKey(KeyCode.LeftShift)) {
-                controller.Move(move * Time.deltaTime * playerSpeed * 2);
-            } else {
-                controller.Move(move * Time.deltaTime * playerSpeed);
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0) {
+                controller.Move(gameObject.transform.forward * (playerSpeed) * Time.deltaTime);
+            } else if (Input.GetAxis("Vertical") > 0) {
+               controller.Move(gameObject.transform.forward * 2 * (playerSpeed) * Time.deltaTime);
             }
 
-            if (Input.GetKey(KeyCode.A))
+
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") < 0) {
+                controller.Move(gameObject.transform.forward * (playerSpeed) * Time.deltaTime);
+            } else if (Input.GetAxis("Vertical") < 0) {
+               controller.Move(gameObject.transform.forward * 2 * (playerSpeed) * Time.deltaTime);
+            }
+
+
+
+
+
+            if (Input.GetKey(KeyCode.A)) {
                 transform.Rotate(Vector3.up * turnSpeed);
-            if (Input.GetKey(KeyCode.D))
+            }
+                
+            if (Input.GetKey(KeyCode.D)) {
                 transform.Rotate(Vector3.down * turnSpeed);
+            }
+                
             
 
             // if (move != Vector3.zero)
