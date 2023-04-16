@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 585187532}
   - component: {fileID: 585187531}
   - component: {fileID: 585187535}
-  - component: {fileID: 585187534}
+  - component: {fileID: 585187533}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87ee95b09c29244a2959da81679a106e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8b4cab1e9bc74a2396136010477f929, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -200,7 +200,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585187529}
   m_CullTransparentMesh: 1
---- !u!114 &585187534
+--- !u!114 &585187533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,20 +209,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 585187529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9810fcba5f94afbb8a8f06423373df, type: 3}
+  m_Script: {fileID: 11500000, guid: 32366c5da0e024e71afc0b36543b9888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutScene2: {fileID: 21300000, guid: 8058b5314db784b16852825fbafc73b7, type: 3}
-  cutScene3: {fileID: 21300000, guid: 656b07bfb2fb1457fbcf9506444f5bfe, type: 3}
-  cutScene4: {fileID: 21300000, guid: 45dd0960406144b0093400606830fe42, type: 3}
-  cutScene5: {fileID: 21300000, guid: ec5113234d12b4f60a2fba3ae48c25c5, type: 3}
-  cutScene6: {fileID: 21300000, guid: f1e1cda6162264249b8227a61ebe02aa, type: 3}
-  cutScene7: {fileID: 21300000, guid: 9f1307aa624f54eb690a7c8148835d2c, type: 3}
-  cutScene8: {fileID: 21300000, guid: 79ead0756c22f46b6a9b13fc623966c4, type: 3}
-  cutScene9: {fileID: 21300000, guid: 309d9f2b086d846119668fadcd2115f2, type: 3}
-  cutscenenew00: {fileID: 21300000, guid: 13277db7a44ce41b98fd9faf9106b3a1, type: 3}
-  cutscenenew1: {fileID: 21300000, guid: f28b5f999802d4eac8f29856c67dda00, type: 3}
-  cutscenenew: {fileID: 21300000, guid: 4aa0f82d76a534ea7bc14482c7d02b91, type: 3}
+  cutscenenew00: {fileID: 21300000, guid: ad7f15a00bc1e4eea8f6b925ceb584a5, type: 3}
+  cutscenenew1: {fileID: 21300000, guid: d90e7d3e500a54ba282c28141101bdd4, type: 3}
+  cutscenenew: {fileID: 21300000, guid: afe7cde744fd74178bcc1da28b5d3eb6, type: 3}
   i: 0
 --- !u!114 &585187535
 MonoBehaviour:
@@ -241,8 +233,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 585187534}
-          m_TargetAssemblyTypeName: ChangeCutScene, Assembly-CSharp
+        - m_Target: {fileID: 585187533}
+          m_TargetAssemblyTypeName: ChangeFinalCutScene, Assembly-CSharp
           m_MethodName: changeImages
           m_Mode: 1
           m_Arguments:

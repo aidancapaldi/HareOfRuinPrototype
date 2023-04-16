@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87ee95b09c29244a2959da81679a106e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22d46ad0bbdd447e388a24bbd3f9faba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -212,17 +212,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9810fcba5f94afbb8a8f06423373df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutScene2: {fileID: 21300000, guid: 8058b5314db784b16852825fbafc73b7, type: 3}
-  cutScene3: {fileID: 21300000, guid: 656b07bfb2fb1457fbcf9506444f5bfe, type: 3}
-  cutScene4: {fileID: 21300000, guid: 45dd0960406144b0093400606830fe42, type: 3}
-  cutScene5: {fileID: 21300000, guid: ec5113234d12b4f60a2fba3ae48c25c5, type: 3}
-  cutScene6: {fileID: 21300000, guid: f1e1cda6162264249b8227a61ebe02aa, type: 3}
-  cutScene7: {fileID: 21300000, guid: 9f1307aa624f54eb690a7c8148835d2c, type: 3}
-  cutScene8: {fileID: 21300000, guid: 79ead0756c22f46b6a9b13fc623966c4, type: 3}
-  cutScene9: {fileID: 21300000, guid: 309d9f2b086d846119668fadcd2115f2, type: 3}
-  cutscenenew00: {fileID: 21300000, guid: 13277db7a44ce41b98fd9faf9106b3a1, type: 3}
-  cutscenenew1: {fileID: 21300000, guid: f28b5f999802d4eac8f29856c67dda00, type: 3}
-  cutscenenew: {fileID: 21300000, guid: 4aa0f82d76a534ea7bc14482c7d02b91, type: 3}
+  cutScene2: {fileID: 21300000, guid: 87938143ab95d4184a4544c78689d9f0, type: 3}
+  cutScene3: {fileID: 21300000, guid: 1ec9e7fbaedf94010803e280dbb215e6, type: 3}
+  cutScene4: {fileID: 21300000, guid: 666ee21316a184cb7905e7becae47d87, type: 3}
+  cutScene5: {fileID: 21300000, guid: a7a68e30c32d949248ff628613c0516f, type: 3}
+  cutScene6: {fileID: 21300000, guid: d96e86aaf399c48b2ab12fb4593b7eeb, type: 3}
+  cutScene7: {fileID: 21300000, guid: 068b267ec58194718b5052a79b3720cd, type: 3}
+  cutScene8: {fileID: 21300000, guid: e79bf386e65574103ac1c17b0ef5a41d, type: 3}
+  cutScene9: {fileID: 21300000, guid: a0261c7b2c6a448b4bf029c40a310a87, type: 3}
+  cutscenenew00: {fileID: 21300000, guid: 3f1d64b06a92a46e289717509834c6f9, type: 3}
+  cutscenenew1: {fileID: 21300000, guid: 260ba295fe4dd48ed810a1c6fb410369, type: 3}
+  cutscenenew: {fileID: 21300000, guid: 855c93976417d4bc5b90d8467cb4292a, type: 3}
   i: 0
 --- !u!114 &585187535
 MonoBehaviour:
