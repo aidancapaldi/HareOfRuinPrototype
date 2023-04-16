@@ -7,31 +7,9 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public Text EnemiesKilledText;
-    public int enemyKillNum;
-    public int showEnemyKillNum;
-
-    public void Start()
-    {
-        //EnemiesKilledText = GetComponent<Text>();
-        //EnemiesKilledText.text = "0";
-
-    }
-
-    //public void Update()
-    //{
-    //    NumEnemiesKilled();
-
-    //}
 
 
 
-    //public void NumEnemiesKilled()
-    //{
-    
-    //        int showEnemyKillNum = PlayerPrefs.GetInt("enemyKillNumber");
-    //        EnemiesKilledText.text = showEnemyKillNum.ToString();
-    //}
 
     public void StartGame()
     {
