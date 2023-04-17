@@ -34,7 +34,7 @@ public class BunnyHealth : MonoBehaviour
     void Update()
     {
         ControlHealthBar();
-        //Debug.Log("health amount: " + currentHealth);
+        Debug.Log("Bunny health amount: " + currentHealth);
 
 
     }

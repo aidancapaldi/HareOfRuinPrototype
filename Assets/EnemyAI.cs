@@ -163,6 +163,10 @@ public class EnemyAI : MonoBehaviour
             (transform.position,nextDestination, enemySpeed * Time.deltaTime);
 
         agent.SetDestination(nextDestination);
+        
+        // when he's far
+        Invoke("FallingObjects", 3);
+
     }
 
     void UpdateChaseState() {
@@ -227,7 +231,7 @@ public class EnemyAI : MonoBehaviour
         // }
 
         // attack
-        Invoke("FallingObjects", 3);
+        Invoke("RollAttack", 3);
 
     }
 
@@ -272,10 +276,15 @@ public class EnemyAI : MonoBehaviour
 
         anim.SetInteger("animState", 6);
 
-        float xMin = -20;
-        float xMax = -30;
-        float zMin = -3;
-        float zMax = 7;
+        // float xMin = -20;
+        // float xMax = -30;
+        // float zMin = -3;
+        // float zMax = 7;
+
+        float xMin = player.transform.position.x - 2;
+        float xMax = player.transform.position.x + 5;
+        float zMin = player.transform.position.z - 2;
+        float zMax = player.transform.position.z + 5;
 
 
         if(!isDead) {

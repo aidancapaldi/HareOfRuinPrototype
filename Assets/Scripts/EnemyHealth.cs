@@ -17,10 +17,10 @@ public class EnemyHealth : MonoBehaviour
 
     public bool isDead = false;
 
-    void Awake()
-    {
-        healthSlider = GetComponentInChildren<Slider>();
-    }
+    // void Awake()
+    // {
+    //     healthSlider = GetComponentInChildren<Slider>();
+    // }
 
     // Start is called before the first frame update
     void Start()
