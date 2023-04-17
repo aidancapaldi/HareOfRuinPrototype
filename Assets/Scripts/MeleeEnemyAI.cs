@@ -223,7 +223,6 @@ public class MeleeEnemyAI : MonoBehaviour
     private void OnDestroy()
     {
         int currentKillCount = PlayerPrefs.GetInt("enemyKillNumber", 0);
-        print(currentKillCount);
         PlayerPrefs.SetInt("enemyKillNumber", currentKillCount + 1);
     }
 }

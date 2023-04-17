@@ -34,9 +34,6 @@ public class BunnyHealth : MonoBehaviour
     void Update()
     {
         ControlHealthBar();
-        //Debug.Log("health amount: " + currentHealth);
-
-
     }
 
     public void TakeDamage(int damageAmount)
@@ -97,7 +94,7 @@ public class BunnyHealth : MonoBehaviour
 
 
         }
-        else if (currentHealth == 0)
+        else if (currentHealth <= 0)
         {
             CurrentHealthBar.transform.GetComponent<Image>().sprite = carrot0;
 

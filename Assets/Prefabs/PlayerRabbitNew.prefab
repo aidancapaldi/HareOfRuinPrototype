@@ -49,15 +49,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.2
+      value: 427.87
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.264
+      value: 12.684272
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.2
+      value: 420.4
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunColorSelected: {fileID: 2100000, guid: 26f069665eacdc543a8984d73fb92fd8, type: 2}
-  swordSFX: {fileID: 0}
+  swordSFX: {fileID: 8300000, guid: ae5ffb08474bc447bb208b12e771713d, type: 3}
 --- !u!114 &561985264568460463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +233,20 @@ MonoBehaviour:
   bunnyHeal: {fileID: 5457471438118595529, guid: 824f5664bac8a4f40a711ad7c95fdcc3, type: 3}
   healAmount: 10
   healSFX: {fileID: 8300000, guid: a77c55d6fe4e44b60964818c54b76eb7, type: 3}
+--- !u!136 &1490036270
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213942857215417518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1856818824
 Rigidbody:
   m_ObjectHideFlags: 0
