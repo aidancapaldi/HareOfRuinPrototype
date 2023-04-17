@@ -11453,7 +11453,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh385634
+  m_Name: pb_Mesh40090
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27478,7 +27478,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh385716
+  m_Name: pb_Mesh40172
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28621,56 +28621,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3637134996410565414, guid: 9c6178fe943216540b276b975dafae16, type: 3}
   m_PrefabInstance: {fileID: 1366256375}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1368962169
+--- !u!1 &1368962169 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6573038593392998779, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+  m_PrefabInstance: {fileID: 6573038592074435842}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1368962170}
-  - component: {fileID: 1368962171}
-  m_Layer: 0
-  m_Name: TeleportationManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1368962170
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368962169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.28, y: 1.9875565, z: 7.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1368962171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368962169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 423933ca065ec4370ad600a19a885068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xMin: -20
-  xMax: -30
-  zMin: -3
-  zMax: 7
-  enemy: {fileID: 919132148661346637}
-  teleportTime: 15
-  teleportParticles: {fileID: 5317938907570067515, guid: bc9c371a4bce944c182621cd87828e62, type: 3}
 --- !u!1001 &1375161030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41817,7 +41772,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-189460
+  m_Name: pb_Mesh-3972
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42538,6 +42493,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1745157521}
+    - target: {fileID: 8403094631320458118, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
+      propertyPath: m_VersionIndex
+      value: 434
+      objectReference: {fileID: 0}
     - target: {fileID: 8424046229895045276, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -49052,6 +49011,67 @@ PrefabInstance:
       objectReference: {fileID: 1202921951}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b108f69dc4cfaae4783975eea56c0f18, type: 3}
+--- !u!1001 &6573038592074435842
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9875565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998776, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573038593392998777, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 919132148661346637}
+    - target: {fileID: 6573038593392998779, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
+      propertyPath: m_Name
+      value: TeleportationManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: beaf7ff976ca348acb4cfdc1a8f749dc, type: 3}
 --- !u!1001 &7650861044532207456
 PrefabInstance:
   m_ObjectHideFlags: 0
