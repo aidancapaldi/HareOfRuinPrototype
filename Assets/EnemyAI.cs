@@ -73,6 +73,8 @@ public class EnemyAI : MonoBehaviour
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
          
         health = enemyHealth.currentHealth;
+        Debug.Log("HEALTH" + health);
+
         if (health <= 0)
         {
             currentState = FSMStates.Dead;
@@ -213,19 +215,19 @@ public class EnemyAI : MonoBehaviour
         
         // change attacks every 5 seconds
 
-        if (!changeAttack) {
-            changeAttack = true;
-            changeAttackCountDown = Random.Range(2, 5); 
+        // if (!changeAttack) {
+        //     changeAttack = true;
+        //     changeAttackCountDown = Random.Range(2, 5); 
 
-            // string[] attacks = {"FallingObjects", "RollAttack", "Teleport"};
-            string[] attacks = {"FallingObjects", "RollAttack"};
-            string randomAttack = attacks[Random.Range(0, attacks.Length)];
-            print(randomAttack);
-            Invoke(randomAttack, 3);
-        }
+        //     // string[] attacks = {"FallingObjects", "RollAttack", "Teleport"};
+        //     string[] attacks = {"FallingObjects", "RollAttack"};
+        //     string randomAttack = attacks[Random.Range(0, attacks.Length)];
+        //     print(randomAttack);
+        //     Invoke(randomAttack, 3);
+        // }
 
         // attack
-        // Invoke("FallingObjects", 3);
+        Invoke("FallingObjects", 3);
 
     }
 
@@ -235,6 +237,7 @@ public class EnemyAI : MonoBehaviour
         isDead = true;
 
         // LevelManager.score += 1;
+        print("DYING!!");
 
         Destroy(gameObject, 3);
 

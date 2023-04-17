@@ -28,6 +28,8 @@ public class EnemyHealth : MonoBehaviour
         isDead = false;
         currentHealth = startingHealth;
         healthSlider.value = currentHealth;
+        Debug.Log("currentHealth" + currentHealth);
+
     }
 
 
@@ -37,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth -= damageAmount;
             healthSlider.value = currentHealth;
-            print("took damage");
+            Debug.Log("took damage");
         }
         else if (currentHealth <= 0)
         {
