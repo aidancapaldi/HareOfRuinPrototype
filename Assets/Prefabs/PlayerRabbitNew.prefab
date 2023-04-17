@@ -136,21 +136,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1779645226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7213942857215417518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a21abe5350dc485f92faf2e394c4d12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healCountDown: 0
-  bunnyHeal: {fileID: 5457471438118595529, guid: 824f5664bac8a4f40a711ad7c95fdcc3, type: 3}
-  healAmount: 10
 --- !u!114 &1779645227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,26 +152,9 @@ MonoBehaviour:
   regularMaterial: {fileID: 2100000, guid: 39263b4f3d83eff4c93af0200476a30c, type: 2}
   invisibleCountDown: 0
   invisibleTimes: 300
+  invisibleReset: 10
   moveSpeed: 2
---- !u!114 &1919479362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7213942857215417518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f223891848a7b4bbd350ce3c591bf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  carrot100: {fileID: 21300000, guid: 09046bffe3c3846edaff8a0df903b28f, type: 3}
-  carrot80: {fileID: 21300000, guid: 22f957f44a7dc464c88749c370e0aa08, type: 3}
-  carrot60: {fileID: 21300000, guid: 5e18f7a23a3ff4f09805cf0eaeba2589, type: 3}
-  carrot40: {fileID: 21300000, guid: 460dba28aaee24ff1bcf5803018ade3f, type: 3}
-  carrot20: {fileID: 21300000, guid: 6f096b3534b4048d481daf2b5aea6ac9, type: 3}
-  carrot0: {fileID: 21300000, guid: bc11683d7ac97405fbc60e3d26c4952f, type: 3}
+  invisibleSFX: {fileID: 0}
 --- !u!114 &1919479363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,20 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6242497093880304371, guid: 2b0294d3181f74bdb93107e5d94bdf70, type: 3}
   projectileSpeed: 30
---- !u!114 &1919479389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7213942857215417518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f35cef0062f9984398aad8b01398981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 2
-  jumpHeight: 1
+  spellSFX: {fileID: 0}
 --- !u!114 &1919479391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +183,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunColorSelected: {fileID: 2100000, guid: 26f069665eacdc543a8984d73fb92fd8, type: 2}
+  swordSFX: {fileID: 0}
+--- !u!114 &561985264568460463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213942857215417518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20d870d72cd84b94970e066374251ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  carrot100: {fileID: 21300000, guid: 09046bffe3c3846edaff8a0df903b28f, type: 3}
+  carrot80: {fileID: 21300000, guid: 22f957f44a7dc464c88749c370e0aa08, type: 3}
+  carrot60: {fileID: 21300000, guid: 5e18f7a23a3ff4f09805cf0eaeba2589, type: 3}
+  carrot40: {fileID: 21300000, guid: 460dba28aaee24ff1bcf5803018ade3f, type: 3}
+  carrot20: {fileID: 21300000, guid: 6f096b3534b4048d481daf2b5aea6ac9, type: 3}
+  carrot0: {fileID: 21300000, guid: bc11683d7ac97405fbc60e3d26c4952f, type: 3}
+--- !u!114 &1064996655362064345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213942857215417518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ddf37cf68efc343845f39ffff95a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 2
+  jumpHeight: 2
+--- !u!114 &3631668055377290613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213942857215417518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026aad259a8dd7043b066355ba43d9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healCountDown: 0
+  bunnyHeal: {fileID: 5457471438118595529, guid: 824f5664bac8a4f40a711ad7c95fdcc3, type: 3}
+  healAmount: 10
+  healSFX: {fileID: 8300000, guid: a77c55d6fe4e44b60964818c54b76eb7, type: 3}
 --- !u!54 &1856818824
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38809213, g: 0.7275574, b: 0.73333406, a: 1}
+  m_IndirectSpecularColor: {r: 0.38810048, g: 0.72781575, b: 0.73249876, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20021,17 +20021,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6759448882052412942, guid: 9787e9e0fbeb87a45beb0d9d4e03edca, type: 3}
   m_PrefabInstance: {fileID: 872733492}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &878988999 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 524163085860698044, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
-  m_PrefabInstance: {fileID: 524163085665909115}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &886281696
 GameObject:
   m_ObjectHideFlags: 0
@@ -22300,12 +22289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5213af972ef148641b9fd7268be1f0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameText: {fileID: 878988999}
-  scoreText: {fileID: 1873544344}
-  gameOverSFX: {fileID: 8300000, guid: a340fbae60fbb264286adaa0ea041851, type: 3}
-  gameWonSFX: {fileID: 8300000, guid: a340fbae60fbb264286adaa0ea041851, type: 3}
-  lerpSpeed: 10
-  nextLevel: Level 2
 --- !u!82 &963194232
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45677,7 +45660,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-102212
+  m_Name: pb_Mesh-19516
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46545,17 +46528,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3637134996410565414, guid: 9c6178fe943216540b276b975dafae16, type: 3}
   m_PrefabInstance: {fileID: 1863837963}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1873544344 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 524163087097478627, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
-  m_PrefabInstance: {fileID: 524163085665909115}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1874398557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49780,13 +49752,14 @@ PrefabInstance:
       objectReference: {fileID: 1817768573}
     - target: {fileID: 8403094631320458118, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_VersionIndex
-      value: 449
+      value: 494
       objectReference: {fileID: 0}
     - target: {fileID: 8424046229895045276, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1817768573}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 561985264568460463, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
 --- !u!1 &1997852460 stripped
 GameObject:
@@ -49808,6 +49781,25 @@ MonoBehaviour:
   laserPrefab: {fileID: 6266962485396246365, guid: 76a5bf4fb924d48589a7e0201b28c85e, type: 3}
   laserTimesValue: 3
   laserCountValue: 20
+--- !u!114 &1997852462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997852460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f223891848a7b4bbd350ce3c591bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  carrot100: {fileID: 21300000, guid: 09046bffe3c3846edaff8a0df903b28f, type: 3}
+  carrot80: {fileID: 21300000, guid: 22f957f44a7dc464c88749c370e0aa08, type: 3}
+  carrot60: {fileID: 21300000, guid: 5e18f7a23a3ff4f09805cf0eaeba2589, type: 3}
+  carrot40: {fileID: 21300000, guid: 460dba28aaee24ff1bcf5803018ade3f, type: 3}
+  carrot20: {fileID: 21300000, guid: 6f096b3534b4048d481daf2b5aea6ac9, type: 3}
+  carrot0: {fileID: 21300000, guid: bc11683d7ac97405fbc60e3d26c4952f, type: 3}
 --- !u!1001 &1998498572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52190,6 +52182,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8993252612292066520, guid: 5cb71ca95ae084e9499abf7bac124753, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8993252612515803932, guid: 5cb71ca95ae084e9499abf7bac124753, type: 3}
       propertyPath: m_Pivot.x
       value: 0
