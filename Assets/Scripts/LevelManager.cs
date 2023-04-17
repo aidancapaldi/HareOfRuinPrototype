@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
         isGameOver = false;
         canvasObject.gameObject.SetActive(false);
         canvasObjectWon.gameObject.SetActive(false);
-
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -54,7 +54,7 @@ public class LevelManager : MonoBehaviour
         float t = Mathf.Sin(Time.time * lerpSpeed);
         t += 1; 
         t /= 2;
-        gameText.color = Color.Lerp(Color.magenta, Color.yellow, t);
+        // gameText.color = Color.Lerp(Color.magenta, Color.yellow, t);
 
         
     }

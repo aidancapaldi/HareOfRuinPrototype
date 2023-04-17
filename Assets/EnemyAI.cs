@@ -73,7 +73,6 @@ public class EnemyAI : MonoBehaviour
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
          
         health = enemyHealth.currentHealth;
-        Debug.Log("HEALTH" + health);
 
         if (health <= 0)
         {
@@ -124,9 +123,9 @@ public class EnemyAI : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if (!isDead)
         {
-            if (other.CompareTag("Player")) {
+            if (other.gameObject.CompareTag("Player")) {
                 // apply damage
-                var playerHealth = other.GetComponent<BunnyHealth>();
+                var playerHealth = other.gameObject.GetComponent<BunnyHealth>();
                 playerHealth.TakeDamage(damageAmount);
             }
         }
@@ -139,7 +138,6 @@ public class EnemyAI : MonoBehaviour
     }
 
     void UpdatePatrolState() {
-        print("Patrolling");
 
         anim.SetInteger("animState", 1);
 
@@ -170,7 +168,6 @@ public class EnemyAI : MonoBehaviour
     }
 
     void UpdateChaseState() {
-        print("Chasing!");
         anim.SetInteger("animState", 2);
 
         nextDestination = player.transform.position;
@@ -196,7 +193,6 @@ public class EnemyAI : MonoBehaviour
     }
 
     void UpdateAttackState() {
-        print("attack!");
 
         nextDestination = player.transform.position;
 
@@ -241,7 +237,6 @@ public class EnemyAI : MonoBehaviour
         isDead = true;
 
         // LevelManager.score += 1;
-        print("DYING!!");
 
         Destroy(gameObject, 3);
 
@@ -281,10 +276,10 @@ public class EnemyAI : MonoBehaviour
         // float zMin = -3;
         // float zMax = 7;
 
-        float xMin = player.transform.position.x - 2;
-        float xMax = player.transform.position.x + 5;
-        float zMin = player.transform.position.z - 2;
-        float zMax = player.transform.position.z + 5;
+        float xMin = player.transform.position.x - 1;
+        float xMax = player.transform.position.x + 3;
+        float zMin = player.transform.position.z - 1;
+        float zMax = player.transform.position.z + 3;
 
 
         if(!isDead) {
@@ -296,7 +291,7 @@ public class EnemyAI : MonoBehaviour
                 attackCountDown = 5; //attack for 5 seconds
                 //Debug.Log("Invisible? " + isInvisible);
 
-                int numOfDaggers = 3;
+                int numOfDaggers = 6;
                 while (numOfDaggers > 0) {
                     Vector3 daggerPosition;
 
@@ -362,7 +357,6 @@ public class EnemyAI : MonoBehaviour
         if(Vector3.Angle(distanceToPlayer, enemyEyes.forward) <= fieldOfView) {
             if(Physics.Raycast(enemyEyes.position, distanceToPlayer, out hit)) {
                 if(hit.collider.CompareTag("Player")) {
-                    print("Player in sight!");
                     return true;
                 }
                 return false;

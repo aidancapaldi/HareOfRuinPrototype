@@ -37,19 +37,19 @@ public class Teleportation : MonoBehaviour
         enemyPosition.z = Random.Range(zMin, zMax);
 
         Instantiate(teleportParticles, enemy.transform.position, enemy.transform.rotation);
-        enemy.active = false;
+        // enemy.active = false;
 
         // wait half a second then appear somewhere else
         enemy.transform.position = enemyPosition;
             
-        StartCoroutine(TeleportBuffer());
+        // StartCoroutine(TeleportBuffer());
 
     }
 
     IEnumerator TeleportBuffer()
     {
         yield return new WaitForSeconds(1);
-        enemy.active = true;
+        // enemy.active = true;
 
     }
 }

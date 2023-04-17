@@ -36,7 +36,6 @@ public class BunnyHealthNew : MonoBehaviour
     void Update()
     {
         ControlHealthBar();
-        Debug.Log("health amount: " + currentHealth);
     }
 
     public void TakeDamage(int damageAmount)

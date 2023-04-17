@@ -7,9 +7,9 @@ public class DaggerDamage : MonoBehaviour
     public int damageAmount = 5;
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("Player")) {
             // apply damage
-            var playerHealth = other.GetComponent<BunnyHealth>();
+            var playerHealth = other.gameObject.GetComponent<BunnyHealth>();
             playerHealth.TakeDamage(damageAmount);
         }
     }
