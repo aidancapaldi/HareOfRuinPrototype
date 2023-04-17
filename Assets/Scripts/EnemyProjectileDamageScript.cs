@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyProjectileDamageScript : MonoBehaviour
 {
-    BunnyHealth playerHealth;
+    BunnyHealthNew playerHealth;
     public int spellDamage = 10;
     GameObject player;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        playerHealth = player.GetComponent<BunnyHealth>();
+        playerHealth = player.GetComponent<BunnyHealthNew>();
         
         // transform.LookAt(player.transform);
     }
