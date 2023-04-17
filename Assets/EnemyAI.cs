@@ -21,22 +21,17 @@ public class EnemyAI : MonoBehaviour
     public float enemySpeed =5;
     public float speed = 3;
     public GameObject player;
-    // public GameObject handTip;
-    // public GameObject[] spellProjectiles;
-    // public float shootRate = 5;
     // public GameObject deadVFX;
 
     public GameObject teleportationHub;
 
-    public static bool attack = false;
-    public float attackCountDown;
-    public static bool changeAttack = false;
-    public float changeAttackCountDown;
-
-    public float projectileSpeed = 100;
     public int damageAmount = 20;
     public GameObject dagger;
 
+    bool attack = false;
+    float attackCountDown;
+    bool changeAttack = false;
+    float changeAttackCountDown;
 
     GameObject[] wanderPoints;
     Vector3 nextDestination;
@@ -44,14 +39,15 @@ public class EnemyAI : MonoBehaviour
     float distanceToPlayer;
     float elapsedTime = 0;
 
-
+    EnemyHealth enemyHealth;
+    int health;
     int currentDestinationIndex = 0;
     Transform deadTransform;
     bool isDead;
 
     NavMeshAgent agent;
     public Transform enemyEyes;
-    public float fieldOfView = 45f;
+    public float fieldOfView = 150;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +57,10 @@ public class EnemyAI : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         // handTip = GameObject.FindGameObjectWithTag("HandTip");
+
+        enemyHealth = GetComponent<EnemyHealth>();
+        health = enemyHealth.currentHealth;
+
         isDead = false;
         agent = GetComponent<NavMeshAgent>();
         Initialize();
@@ -72,8 +72,11 @@ public class EnemyAI : MonoBehaviour
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
          
-
-
+        health = enemyHealth.currentHealth;
+        if (health <= 0)
+        {
+            currentState = FSMStates.Dead;
+        }
 
         switch(currentState)
         {
@@ -117,13 +120,13 @@ public class EnemyAI : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("Projectile")){
-            currentState = FSMStates.Dead;
-        }
-        if (other.CompareTag("Player")) {
-            // apply damage
-            // var playerHealth = other.GetComponent<PlayerHealth>();
-            // playerHealth.TakeDamage(damageAmount);
+        if (!isDead)
+        {
+            if (other.CompareTag("Player")) {
+                // apply damage
+                var playerHealth = other.GetComponent<BunnyHealth>();
+                playerHealth.TakeDamage(damageAmount);
+            }
         }
     }
 
@@ -145,13 +148,6 @@ public class EnemyAI : MonoBehaviour
 
         if(Vector3.Distance(transform.position, nextDestination) < 1) {
             FindNextPoint();
-            //remove later
-            // anim.SetInteger("animState", 6);
-            // Invoke("FallingObjects", 3);
-
-            //remove later
-            // currentState = FSMStates.Attack;
-            
         }
         else if(distanceToPlayer <= chaseDistance || IsPlayerInClearFOV()) {
             currentState = FSMStates.Chase;
@@ -239,7 +235,9 @@ public class EnemyAI : MonoBehaviour
 
         // LevelManager.score += 1;
 
-        Destroy(gameObject);
+        Destroy(gameObject, 3);
+
+        //you won the entire game
 
     }
 
@@ -262,20 +260,6 @@ public class EnemyAI : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(directionToTarget);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 10* Time.deltaTime);
     }
-
-    // void SpellCasting() {
-    //     if(!isDead){
-    //         if (elapsedTime >= shootRate) {
-    //             GameObject spellProjectile = spellProjectiles[Random.Range(0, spellProjectiles.Length)];
-    //             GameObject projectile = Instantiate(spellProjectile, handTip.transform.position, handTip.transform.rotation);
-    //             Rigidbody rb = projectile.GetComponent<Rigidbody>();
-    //             rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
-    //             projectile.transform.SetParent(GameObject.FindGameObjectWithTag("ProjectileParent").transform);
-    //             elapsedTime = 0.0f;
-    //         }
-    //     }
-
-    // }
 
     void FallingObjects() {
 

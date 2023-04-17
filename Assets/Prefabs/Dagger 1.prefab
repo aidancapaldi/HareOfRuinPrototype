@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 488255700628744175}
   - component: {fileID: 5018895228903124142}
   - component: {fileID: 1807522734925493872}
+  - component: {fileID: 4341482510845825280}
   m_Layer: 0
   m_Name: Dagger 1
-  m_TagString: Untagged
+  m_TagString: Dagger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2357764197659016913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.134361, y: 5, z: 0.59237266}
+  m_LocalPosition: {x: -28.58406, y: 5, z: 4.8456545}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,3 +127,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyDuration: 2
+--- !u!114 &4341482510845825280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2357764197659016913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16b67e4bd21446cabe016ea012d3e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
