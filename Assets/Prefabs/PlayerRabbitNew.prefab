@@ -49,31 +49,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 427.87
+      value: 347.28
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.684272
+      value: 32.6
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 420.4
+      value: 341.12
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.38629255
+      value: -0.93883103
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9223764
+      value: -0.3443783
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -134.552
+      value: -319.712
       objectReference: {fileID: 0}
     - target: {fileID: 4568623958809719741, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -99,6 +99,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4568623958817496141, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2aacc4ac936d0374cb491ea0ed02ee9f, type: 2}
     - target: {fileID: 8893100699281061172, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -118,6 +122,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3450544681260914369, guid: 21a09b49b7b28ba48a058a5c7bb5f4f2, type: 3}
   m_PrefabInstance: {fileID: 6591600273099862835}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1490036270
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213942857215417518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &1919479388
 CharacterController:
   m_ObjectHideFlags: 0
@@ -154,7 +172,7 @@ MonoBehaviour:
   invisibleTimes: 300
   invisibleReset: 10
   moveSpeed: 2
-  invisibleSFX: {fileID: 0}
+  invisibleSFX: {fileID: 8300000, guid: 244c2d7128c2743c5988eb288e6bc9b3, type: 3}
 --- !u!114 &1919479363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6242497093880304371, guid: 2b0294d3181f74bdb93107e5d94bdf70, type: 3}
   projectileSpeed: 30
-  spellSFX: {fileID: 0}
+  spellSFX: {fileID: 8300000, guid: 10e7313a8ee4e44d5a1a369bb5b7cfb5, type: 3}
 --- !u!114 &1919479391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
+  currentHealth: 0
   carrot100: {fileID: 21300000, guid: 09046bffe3c3846edaff8a0df903b28f, type: 3}
   carrot80: {fileID: 21300000, guid: 22f957f44a7dc464c88749c370e0aa08, type: 3}
   carrot60: {fileID: 21300000, guid: 5e18f7a23a3ff4f09805cf0eaeba2589, type: 3}
@@ -233,20 +252,6 @@ MonoBehaviour:
   bunnyHeal: {fileID: 5457471438118595529, guid: 824f5664bac8a4f40a711ad7c95fdcc3, type: 3}
   healAmount: 10
   healSFX: {fileID: 8300000, guid: a77c55d6fe4e44b60964818c54b76eb7, type: 3}
---- !u!136 &1490036270
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7213942857215417518}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1856818824
 Rigidbody:
   m_ObjectHideFlags: 0
