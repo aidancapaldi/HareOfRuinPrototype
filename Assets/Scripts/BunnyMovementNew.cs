@@ -54,11 +54,11 @@ public class BunnyMovementNew : MonoBehaviour
 
 
             if (Input.GetKey(KeyCode.A)) {
-                transform.Rotate(Vector3.up * turnSpeed);
+                transform.Rotate(Vector3.down * turnSpeed);
             }
                 
             if (Input.GetKey(KeyCode.D)) {
-                transform.Rotate(Vector3.down * turnSpeed);
+                transform.Rotate(Vector3.up * turnSpeed);
             }
                 
             
