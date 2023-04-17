@@ -213,18 +213,19 @@ public class EnemyAI : MonoBehaviour
         
         // change attacks every 5 seconds
 
-        // if (!changeAttack) {
-        //     changeAttack = true;
-        //     changeAttackCountDown = 5; 
+        if (!changeAttack) {
+            changeAttack = true;
+            changeAttackCountDown = Random.Range(2, 5); 
 
-        //     string[] attacks = {"FallingObjects", "RollAttack", "Teleport"};
-        //     string randomAttack = attacks[Random.Range(0, attacks.Length)];
-        //     print(randomAttack);
-        //     Invoke(randomAttack, 3);
-        // }
+            // string[] attacks = {"FallingObjects", "RollAttack", "Teleport"};
+            string[] attacks = {"FallingObjects", "RollAttack"};
+            string randomAttack = attacks[Random.Range(0, attacks.Length)];
+            print(randomAttack);
+            Invoke(randomAttack, 3);
+        }
 
         // attack
-        Invoke("FallingObjects", 3);
+        // Invoke("FallingObjects", 3);
 
     }
 
