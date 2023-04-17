@@ -35,7 +35,7 @@ public class ShopManager : MonoBehaviour
     public void HideShop()
     {
         ShopUI.SetActive(false);
-        guiManager.UIsRequiringCursorVisible -= 1;
+        guiManager.UIsRequiringCursorVisible = Mathf.Clamp(guiManager.UIsRequiringCursorVisible - 1, 0, 2);
 
         // Make sure that if the tooltip is open when menu is closing, close the tooltip
         GameObject.FindObjectOfType<Tooltip>().HideTooltip(); 
@@ -43,9 +43,9 @@ public class ShopManager : MonoBehaviour
 
     public void ShowShop()
     {
+        guiManager.UIsRequiringCursorVisible = Mathf.Clamp(guiManager.UIsRequiringCursorVisible + 1, 0, 2);
         ShopUI.SetActive(true);
         UpdateCoinText();
-        guiManager.UIsRequiringCursorVisible += 1;
         RenderShopItems();
     }
 

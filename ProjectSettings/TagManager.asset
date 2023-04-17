@@ -26,6 +26,8 @@ TagManager:
   - CoinText
   - RabbitMat
   - WanderPointBoss
+  - Laser
+  - Dagger
   layers:
   - Default
   - TransparentFX

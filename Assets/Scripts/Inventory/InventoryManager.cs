@@ -79,14 +79,14 @@ public class InventoryManager : MonoBehaviour
   public void ShowInventory()
   {
     InventoryUI.SetActive(true);
-    guiManager.UIsRequiringCursorVisible += 1;
+    guiManager.UIsRequiringCursorVisible = Mathf.Clamp(guiManager.UIsRequiringCursorVisible + 1, 0, 2);
     RerenderInventoryItems();
   }
 
   public void HideInventory()
   {
     InventoryUI.SetActive(false);
-    guiManager.UIsRequiringCursorVisible -= 1;
+    guiManager.UIsRequiringCursorVisible = Mathf.Clamp(guiManager.UIsRequiringCursorVisible - 1, 0, 2);
     
     // Make sure that if the tooltip is open when menu is closing, close the tooltip
     GameObject.FindObjectOfType<Tooltip>().HideTooltip(); 

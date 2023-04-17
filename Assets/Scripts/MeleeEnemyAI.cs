@@ -42,13 +42,14 @@ public class MeleeEnemyAI : MonoBehaviour
     void Update()
     {
 
-      
+
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
         bool e = gameObject.GetComponent<EnemyHealth>().isDead;
         if (e == true)
         {
             currentState = FSMStates.Dead;
+           
         }
 
         switch (currentState)
@@ -218,4 +219,11 @@ public class MeleeEnemyAI : MonoBehaviour
     //        currentState = FSMStates.Dead;
     //    }
     //}
+
+    private void OnDestroy()
+    {
+        int currentKillCount = PlayerPrefs.GetInt("enemyKillNumber", 0);
+        print(currentKillCount);
+        PlayerPrefs.SetInt("enemyKillNumber", currentKillCount + 1);
+    }
 }

@@ -6,8 +6,15 @@ using UnityEngine.UI;
 
 using UnityEngine.SceneManagement;
 
+
 public class LevelManager : MonoBehaviour
 {
+    public Sprite[] lostImages;
+    public Image lostImage;
+    public Canvas canvasObject;
+    public Sprite[] wonImages;
+    public Image wonImage;
+    public Canvas canvasObjectWon;
     public static float numEnemies; 
     public Text gameText; 
     public Text scoreText;
@@ -28,6 +35,10 @@ public class LevelManager : MonoBehaviour
     {
         numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         isGameOver = false;
+        canvasObject.gameObject.SetActive(false);
+        canvasObjectWon.gameObject.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -61,31 +72,33 @@ public class LevelManager : MonoBehaviour
     public void LevelLost() 
     {
         isGameOver = true;
-        gameText.text = "YOU DIED!";
-        gameText.gameObject.SetActive(true);
+        //gameText.text = "YOU DIED!";
+        //gameText.gameObject.SetActive(true);
+        //Time.timeScale = 0f;
 
         Camera.main.GetComponent<AudioSource>().pitch = 1;
         AudioSource.PlayClipAtPoint(gameOverSFX, Camera.main.transform.position);
+        Invoke("chooseLostImage", 3);
 
-        Invoke("LoadCurrentLevel", 2);
+        Invoke("LoadCurrentLevel", 7);
     }
 
     public void LevelBeat() 
     {
         isGameOver = true;
-        gameText.text = "YOU WIN!";
+        //gameText.text = "YOU WIN!";
         
-        gameText.gameObject.SetActive(true);
+        //gameText.gameObject.SetActive(true);
 
       
         Camera.main.GetComponent<AudioSource>().pitch = 2;
         AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
 
-        
+        Invoke("chooseWonImage", 3);
         
 
         if (!string.IsNullOrEmpty(nextLevel)) {
-            Invoke("LoadNextLevel", 2);
+            Invoke("LoadNextLevel", 7);
         }
         
     }
@@ -100,5 +113,18 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-   
+    public void chooseLostImage()
+    {
+        lostImage.sprite = lostImages[Random.Range(0, lostImages.Length)];
+        canvasObject.gameObject.SetActive(true);
+    }
+
+    public void chooseWonImage()
+    {
+        wonImage.sprite = wonImages[Random.Range(0, wonImages.Length)];
+        canvasObjectWon.gameObject.SetActive(true);
+    }
+
+
+
 }
