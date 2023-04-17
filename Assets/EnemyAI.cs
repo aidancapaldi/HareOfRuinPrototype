@@ -23,8 +23,16 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     // public GameObject handTip;
     // public GameObject[] spellProjectiles;
-    public float shootRate = 5;
-    public GameObject deadVFX;
+    // public float shootRate = 5;
+    // public GameObject deadVFX;
+
+    public GameObject teleportationHub;
+
+    public static bool attack = false;
+    public float attackCountDown;
+    public static bool changeAttack = false;
+    public float changeAttackCountDown;
+
     public float projectileSpeed = 100;
     public int damageAmount = 20;
     public GameObject dagger;
@@ -63,7 +71,10 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        
+         
+
+
+
         switch(currentState)
         {
             case FSMStates.Patrol:
@@ -80,6 +91,28 @@ public class EnemyAI : MonoBehaviour
                 break;
         }
         elapsedTime += Time.deltaTime;
+
+        if (attackCountDown > 0)
+        {
+            attackCountDown -= Time.deltaTime;
+        }
+        else
+        {
+            attackCountDown = 0;
+            attack = false;
+            //Debug.Log("Invisible? " + isInvisible);
+        }
+
+        if (changeAttackCountDown > 0)
+        {
+            changeAttackCountDown -= Time.deltaTime;
+        }
+        else
+        {
+            changeAttackCountDown = 0;
+            changeAttack = false;
+            //Debug.Log("Invisible? " + isInvisible);
+        }
     
     }
 
@@ -112,17 +145,24 @@ public class EnemyAI : MonoBehaviour
 
         if(Vector3.Distance(transform.position, nextDestination) < 1) {
             FindNextPoint();
+            //remove later
+            // anim.SetInteger("animState", 6);
+            // Invoke("FallingObjects", 3);
+
+            //remove later
+            // currentState = FSMStates.Attack;
+            
         }
-        else if(IsPlayerInClearFOV()) {
+        else if(distanceToPlayer <= chaseDistance || IsPlayerInClearFOV()) {
             currentState = FSMStates.Chase;
+
         }
-
-
-        //remove later
-        Invoke("FallingObjects", 3);
-
 
         FaceTarget(nextDestination);
+
+
+        transform.position = Vector3.MoveTowards
+            (transform.position,nextDestination, enemySpeed * Time.deltaTime);
 
         agent.SetDestination(nextDestination);
     }
@@ -148,6 +188,9 @@ public class EnemyAI : MonoBehaviour
         FaceTarget(nextDestination);
         
         agent.SetDestination(nextDestination);
+
+        transform.position = Vector3.MoveTowards
+            (transform.position, nextDestination, enemySpeed * Time.deltaTime);
     }
 
     void UpdateAttackState() {
@@ -169,11 +212,22 @@ public class EnemyAI : MonoBehaviour
         // anim.SetInteger("animState", 3);
         
         //bounce
-        anim.SetInteger("animState", 5);
+        // anim.SetInteger("animState", 5);
+        
+        
+        // change attacks every 5 seconds
 
-        // attack will be bounce then objects fall
+        // if (!changeAttack) {
+        //     changeAttack = true;
+        //     changeAttackCountDown = 5; 
 
-        // Invoke("SpellCasting", 3);
+        //     string[] attacks = {"FallingObjects", "RollAttack", "Teleport"};
+        //     string randomAttack = attacks[Random.Range(0, attacks.Length)];
+        //     print(randomAttack);
+        //     Invoke(randomAttack, 3);
+        // }
+
+        // attack
         Invoke("FallingObjects", 3);
 
     }
@@ -192,11 +246,11 @@ public class EnemyAI : MonoBehaviour
     void FindNextPoint() {
 
 
-        currentDestinationIndex = (currentDestinationIndex + 1) % wanderPoints.Length;
+        // currentDestinationIndex = (currentDestinationIndex + 1) % wanderPoints.Length;
 
         nextDestination = wanderPoints[currentDestinationIndex].transform.position;
 
-        // currentDestinationIndex = (currentDestinationIndex + 1) % wanderPoints.Length;
+        currentDestinationIndex = (currentDestinationIndex + 1) % wanderPoints.Length;
 
         agent.SetDestination(nextDestination);
 
@@ -225,31 +279,66 @@ public class EnemyAI : MonoBehaviour
 
     void FallingObjects() {
 
+        // teleportationHub.active = false;
+
+
+        anim.SetInteger("animState", 6);
+
         float xMin = -20;
         float xMax = -30;
         float zMin = -3;
         float zMax = 7;
 
+
         if(!isDead) {
-            int numOfDaggers = 3;
-            while (numOfDaggers <= 3) {
-                Vector3 daggerPosition;
 
-                daggerPosition.x = Random.Range(xMin, xMax);
-                // should appear from the ceiling
-                daggerPosition.y = 5;
-                daggerPosition.z = Random.Range(zMin, zMax);
 
-                dagger.transform.position = daggerPosition;
-        
-                Instantiate(dagger, dagger.transform.position, dagger.transform.rotation);
-                numOfDaggers = numOfDaggers - 1;
+            if (!attack)
+            {
+                attack = true;
+                attackCountDown = 5; //attack for 5 seconds
+                //Debug.Log("Invisible? " + isInvisible);
+
+                int numOfDaggers = 3;
+                while (numOfDaggers > 0) {
+                    Vector3 daggerPosition;
+
+                    daggerPosition.x = Random.Range(xMin, xMax);
+                    // should appear from the ceiling
+                    daggerPosition.y = 5;
+                    daggerPosition.z = Random.Range(zMin, zMax);
+
+                    dagger.transform.position = daggerPosition;
+            
+                    Instantiate(dagger, dagger.transform.position, dagger.transform.rotation);
+                    numOfDaggers = numOfDaggers - 1;
+
+                }
 
             }
+            
+
+
 
         }
     }
 
+    void RollAttack() {
+        // teleportationHub.active = false;
+
+        anim.SetInteger("animState", 5);
+
+        Vector3 scaleChange = new Vector3(Mathf.Sin(Time.time * 2) + 1, Mathf.Sin(Time.time * 2) + 1, Mathf.Sin(Time.time * 2) + 1);
+ 
+        transform.localScale = scaleChange;
+
+    }
+
+    void Teleport() {
+        anim.SetInteger("animState", 3);
+
+        teleportationHub.active = true;
+    }
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
@@ -274,7 +363,7 @@ public class EnemyAI : MonoBehaviour
         Vector3 distanceToPlayer = player.transform.position - enemyEyes.position;
 
         if(Vector3.Angle(distanceToPlayer, enemyEyes.forward) <= fieldOfView) {
-            if(Physics.Raycast(enemyEyes.position, distanceToPlayer, out hit, chaseDistance)) {
+            if(Physics.Raycast(enemyEyes.position, distanceToPlayer, out hit)) {
                 if(hit.collider.CompareTag("Player")) {
                     print("Player in sight!");
                     return true;
