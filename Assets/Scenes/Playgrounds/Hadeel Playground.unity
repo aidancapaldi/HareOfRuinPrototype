@@ -23863,7 +23863,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-189714
+  m_Name: pb_Mesh-62562
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25680,7 +25680,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh385378
+  m_Name: pb_Mesh89892
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41772,7 +41772,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3972
+  m_Name: pb_Mesh-62308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42495,7 +42495,7 @@ PrefabInstance:
       objectReference: {fileID: 1745157521}
     - target: {fileID: 8403094631320458118, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_VersionIndex
-      value: 434
+      value: 437
       objectReference: {fileID: 0}
     - target: {fileID: 8424046229895045276, guid: 656c299fe30637643b2354e8473ca97e, type: 3}
       propertyPath: m_Mesh
@@ -48823,7 +48823,14 @@ MonoBehaviour:
   player: {fileID: 640083319}
   enemySpeed: 5
   shootRate: 2
+  wanderPoints: []
+  nextDestination: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
+  distanceToPlayer: 0
+  elapsedTime: 0
+  dagger: {fileID: 0}
   damageAmount: 7
+  currentDestinationIndex: 0
 --- !u!114 &919132148661346643
 MonoBehaviour:
   m_ObjectHideFlags: 0

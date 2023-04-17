@@ -5,9 +5,9 @@ using UnityEngine;
 public class Teleportation : MonoBehaviour
 {
     //calculate this from the arena given   
-    public float xMin = 395;
-    public float xMax = 425;
-    public float zMin = 395;
+    public float xMin = 425;
+    public float xMax = 440;
+    public float zMin = 405;
     public float zMax = 417;
 
     public GameObject enemy;
@@ -37,19 +37,9 @@ public class Teleportation : MonoBehaviour
         enemyPosition.z = Random.Range(zMin, zMax);
 
         Instantiate(teleportParticles, enemy.transform.position, enemy.transform.rotation);
-        // enemy.active = false;
-
         // wait half a second then appear somewhere else
         enemy.transform.position = enemyPosition;
             
-        // StartCoroutine(TeleportBuffer());
-
     }
 
-    IEnumerator TeleportBuffer()
-    {
-        yield return new WaitForSeconds(1);
-        // enemy.active = true;
-
-    }
 }

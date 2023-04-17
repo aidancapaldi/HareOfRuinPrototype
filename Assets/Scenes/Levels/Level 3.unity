@@ -673,11 +673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.27247033
+      value: -0.2724704
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06448154
+      value: 0.064481534
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.y
@@ -685,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.40616915
+      value: 0.40616912
       objectReference: {fileID: 0}
     - target: {fileID: 51540890744404940, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.w
@@ -971,7 +971,7 @@ MonoBehaviour:
   zMin: 405
   zMax: 417
   enemy: {fileID: 1773844972}
-  teleportTime: 15
+  teleportTime: 8
   teleportParticles: {fileID: 5317938907570067515, guid: bc9c371a4bce944c182621cd87828e62, type: 3}
 --- !u!4 &397956227
 Transform:
@@ -3291,7 +3291,6 @@ MonoBehaviour:
   enemySpeed: 3
   speed: 3
   player: {fileID: 0}
-  teleportationHub: {fileID: 0}
   damageAmount: 20
   dagger: {fileID: 1800348027514616898, guid: 2dd864f1b8e77448ab1c3c96ee1f72e5, type: 3}
   enemyEyes: {fileID: 314938862}

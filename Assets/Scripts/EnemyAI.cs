@@ -23,8 +23,6 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     // public GameObject deadVFX;
 
-    public GameObject teleportationHub;
-
     public int damageAmount = 20;
     public GameObject dagger;
 
@@ -56,8 +54,6 @@ public class EnemyAI : MonoBehaviour
         wanderPoints = GameObject.FindGameObjectsWithTag("WanderPointBoss");
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
-        // handTip = GameObject.FindGameObjectWithTag("HandTip");
-
         enemyHealth = GetComponent<EnemyHealth>();
         health = enemyHealth.currentHealth;
 
@@ -104,7 +100,6 @@ public class EnemyAI : MonoBehaviour
         {
             attackCountDown = 0;
             attack = false;
-            //Debug.Log("Invisible? " + isInvisible);
         }
 
         if (changeAttackCountDown > 0)
@@ -115,7 +110,6 @@ public class EnemyAI : MonoBehaviour
         {
             changeAttackCountDown = 0;
             changeAttack = false;
-            //Debug.Log("Invisible? " + isInvisible);
         }
     
     }
@@ -162,7 +156,6 @@ public class EnemyAI : MonoBehaviour
 
         agent.SetDestination(nextDestination);
         
-        // when he's far
         Invoke("FallingObjects", 3);
 
     }
@@ -207,24 +200,6 @@ public class EnemyAI : MonoBehaviour
         }
 
         FaceTarget(nextDestination);
-        // anim.SetInteger("animState", 3);
-        
-        //bounce
-        // anim.SetInteger("animState", 5);
-        
-        
-        // change attacks every 5 seconds
-
-        // if (!changeAttack) {
-        //     changeAttack = true;
-        //     changeAttackCountDown = Random.Range(2, 5); 
-
-        //     // string[] attacks = {"FallingObjects", "RollAttack", "Teleport"};
-        //     string[] attacks = {"FallingObjects", "RollAttack"};
-        //     string randomAttack = attacks[Random.Range(0, attacks.Length)];
-        //     print(randomAttack);
-        //     Invoke(randomAttack, 3);
-        // }
 
         // attack
         Invoke("RollAttack", 3);
@@ -235,9 +210,6 @@ public class EnemyAI : MonoBehaviour
         anim.SetInteger("animState", 4);
         deadTransform = gameObject.transform;
         isDead = true;
-
-        // LevelManager.score += 1;
-
         Destroy(gameObject, 3);
 
         //you won the entire game
@@ -245,9 +217,6 @@ public class EnemyAI : MonoBehaviour
     }
 
     void FindNextPoint() {
-
-
-        // currentDestinationIndex = (currentDestinationIndex + 1) % wanderPoints.Length;
 
         nextDestination = wanderPoints[currentDestinationIndex].transform.position;
 
@@ -266,15 +235,7 @@ public class EnemyAI : MonoBehaviour
 
     void FallingObjects() {
 
-        // teleportationHub.active = false;
-
-
         anim.SetInteger("animState", 6);
-
-        // float xMin = -20;
-        // float xMax = -30;
-        // float zMin = -3;
-        // float zMax = 7;
 
         float xMin = player.transform.position.x - 1;
         float xMax = player.transform.position.x + 3;
@@ -289,7 +250,6 @@ public class EnemyAI : MonoBehaviour
             {
                 attack = true;
                 attackCountDown = 5; //attack for 5 seconds
-                //Debug.Log("Invisible? " + isInvisible);
 
                 int numOfDaggers = 6;
                 while (numOfDaggers > 0) {
@@ -316,7 +276,6 @@ public class EnemyAI : MonoBehaviour
     }
 
     void RollAttack() {
-        // teleportationHub.active = false;
 
         anim.SetInteger("animState", 5);
 
@@ -326,11 +285,6 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    void Teleport() {
-        anim.SetInteger("animState", 3);
-
-        teleportationHub.active = true;
-    }
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;

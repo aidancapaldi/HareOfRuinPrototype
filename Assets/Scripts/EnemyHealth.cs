@@ -17,11 +17,6 @@ public class EnemyHealth : MonoBehaviour
 
     public bool isDead = false;
 
-    // void Awake()
-    // {
-    //     healthSlider = GetComponentInChildren<Slider>();
-    // }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +45,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("Collided with " + collision.gameObject.ToString());
         if (collision.gameObject.CompareTag("Projectile"))
         {
             TakeDamage(ProjectileDamage);
