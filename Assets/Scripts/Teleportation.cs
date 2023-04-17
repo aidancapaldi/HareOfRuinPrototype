@@ -5,10 +5,10 @@ using UnityEngine;
 public class Teleportation : MonoBehaviour
 {
     //calculate this from the arena given   
-    public float xMin = -20;
-    public float xMax = -30;
-    public float zMin = -3;
-    public float zMax = 7;
+    public float xMin = 395;
+    public float xMax = 425;
+    public float zMin = 395;
+    public float zMax = 417;
 
     public GameObject enemy;
     public float teleportTime = 3;

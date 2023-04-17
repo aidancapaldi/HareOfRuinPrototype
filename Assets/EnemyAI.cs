@@ -302,7 +302,7 @@ public class EnemyAI : MonoBehaviour
 
                     daggerPosition.x = Random.Range(xMin, xMax);
                     // should appear from the ceiling
-                    daggerPosition.y = 5;
+                    daggerPosition.y = player.transform.position.y + 5;
                     daggerPosition.z = Random.Range(zMin, zMax);
 
                     dagger.transform.position = daggerPosition;
