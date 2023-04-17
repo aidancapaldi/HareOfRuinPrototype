@@ -44,9 +44,9 @@ public class BunnyMovementNew : MonoBehaviour
 
 
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") < 0) {
-                controller.Move(gameObject.transform.forward * 2 * (playerSpeed) * Time.deltaTime);
+                controller.Move(gameObject.transform.forward * 2 * (playerSpeed) * Time.deltaTime * -1);
             } else if (Input.GetAxis("Vertical") < 0) {
-               controller.Move(gameObject.transform.forward * (playerSpeed) * Time.deltaTime);
+               controller.Move(gameObject.transform.forward * (playerSpeed) * Time.deltaTime * -1);
             }
 
 
