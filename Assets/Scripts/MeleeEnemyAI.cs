@@ -205,7 +205,7 @@ public class MeleeEnemyAI : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            var BunnyHealth = other.GetComponent<BunnyHealth>();
+            var BunnyHealth = other.GetComponent<BunnyHealthNew>();
             BunnyHealth.TakeDamage(damageAmount);
         }
 

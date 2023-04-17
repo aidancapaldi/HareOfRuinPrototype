@@ -11,7 +11,7 @@ public class BunnyHealthNew : MonoBehaviour
 
     public static bool isPlayerDead = false;
 
-    int currentHealth;
+    public int currentHealth;
 
     public Sprite carrot100;
     public Sprite carrot80;
@@ -55,6 +55,20 @@ public class BunnyHealthNew : MonoBehaviour
     {
         isPlayerDead = true;
         FindObjectOfType<LevelManager>().LevelLost();
+    }
+
+    public void Heal(int healAmount)
+    {
+        // can't heal if invisible?
+        if (currentHealth > 0 && !BunnyInvisible.isInvisible)
+        {
+            currentHealth += healAmount;
+            //healthSlider.value = currentHealth;
+        }
+        if (currentHealth <= 0)
+        {
+            PlayerDies();
+        }
     }
 
     public void ControlHealthBar()

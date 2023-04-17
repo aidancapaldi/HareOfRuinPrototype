@@ -32,7 +32,7 @@ public class BunnyHealNew : MonoBehaviour
                 // This doesn't cover for the case where health ~97, you can heal past 100
                 // Adding logic to stop this
                 healTimes -= 1;
-                var BunnyHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<BunnyHealth>();
+                var BunnyHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<BunnyHealthNew>();
                 // BunnyHealth.Heal(healAmount);
                 AudioSource.PlayClipAtPoint(healSFX, Camera.main.transform.position);
                 Invoke("HealBunny", 2);
@@ -43,13 +43,13 @@ public class BunnyHealNew : MonoBehaviour
 
     void HealBunny() {
         // Logic to stop overflow healing
-        var BunnyHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<BunnyHealth>();
+        var BunnyHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<BunnyHealthNew>();
         if (BunnyHealth.currentHealth + healAmount > 100) {
             // If we would have overhealed, cap it.
             // E.g. invoked at 95 health should heal 5 (100 - curHealth) instead of 10 (healAmount)
             healAmount = 100 - BunnyHealth.currentHealth;
         }
-        FindObjectOfType<BunnyHealth>().Heal(healAmount);
+        FindObjectOfType<BunnyHealthNew>().Heal(healAmount);
         // BunnyHealth.Heal(healAmount);
     }
 }
