@@ -986,8 +986,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoxMeleeSadie (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8200365946857417462, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 217233336}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+--- !u!114 &217233336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1813796373341209395, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+  m_PrefabInstance: {fileID: 217233335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &219003340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,8 +2037,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoxMeleeSadie
       objectReference: {fileID: 0}
+    - target: {fileID: 8200365946857417462, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 412023794}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+--- !u!114 &412023794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1813796373341209395, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+  m_PrefabInstance: {fileID: 412023793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &473234818
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -2848,8 +2878,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoxMeleeSadie (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8200365946857417462, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 596513310}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+--- !u!114 &596513310 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1813796373341209395, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+  m_PrefabInstance: {fileID: 596513309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &600807158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5078,6 +5123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoxMeleeSadie (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8200365946857417462, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1129226778}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
 --- !u!4 &1129226777 stripped
@@ -5085,6 +5134,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7827317783457963997, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
   m_PrefabInstance: {fileID: 1129226776}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1129226778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1813796373341209395, guid: c8c4b8faa7b544bc4b47d9021084b079, type: 3}
+  m_PrefabInstance: {fileID: 1129226776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1149153425
 GameObject:
   m_ObjectHideFlags: 0
@@ -8973,7 +9033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889842823133, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0039464235
+      value: 0.003946431
       objectReference: {fileID: 0}
     - target: {fileID: 51540889842823133, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.y
@@ -8981,15 +9041,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889842823133, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.46909064
+      value: 0.4690906
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.078127004
+      value: 0.07812694
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0011091904
+      value: 0.0011091903
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.y
@@ -8997,7 +9057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.43682647
+      value: 0.43682644
       objectReference: {fileID: 0}
     - target: {fileID: 51540890744404940, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.w
