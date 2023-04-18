@@ -1828,6 +1828,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 581052544951154297, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
 --- !u!1 &1006132519
@@ -3802,6 +3806,10 @@ PrefabInstance:
       propertyPath: lostImage
       value: 
       objectReference: {fileID: 1038405816}
+    - target: {fileID: 1651943236409254309, guid: c104bfb3899044dbda8fc03b0e5d35f4, type: 3}
+      propertyPath: nextLevel
+      value: CutSceneAfterBoss
+      objectReference: {fileID: 0}
     - target: {fileID: 1651943236409254309, guid: c104bfb3899044dbda8fc03b0e5d35f4, type: 3}
       propertyPath: scoreText
       value: 

@@ -81,7 +81,6 @@ public class ChangeCutScene : MonoBehaviour
                 //i = 0; //Reset it to 0
                 break;
             default:
-                Debug.Log("Error");
                 break;
         }
     }
