@@ -27,6 +27,6 @@ class ItemController : MonoBehaviour
 
   private void HealPlayer()
   {
-    FindObjectOfType<BunnyHealth>().Heal(50);
+    FindObjectOfType<BunnyHealthNew>().Heal(50);
   }
 }
