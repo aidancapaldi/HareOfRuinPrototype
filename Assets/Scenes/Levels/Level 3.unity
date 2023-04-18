@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -357,7 +357,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34449443}
-  m_LocalRotation: {x: 0.24935734, y: -0.004218837, z: 0.0010863239, w: 0.96840173}
+  m_LocalRotation: {x: 0.24935734, y: -0.0042188372, z: 0.0010863239, w: 0.9684018}
   m_LocalPosition: {x: 427.95712, y: 18.684273, z: 410.40036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3808,7 +3808,7 @@ PrefabInstance:
       objectReference: {fileID: 1038405816}
     - target: {fileID: 1651943236409254309, guid: c104bfb3899044dbda8fc03b0e5d35f4, type: 3}
       propertyPath: nextLevel
-      value: CutSceneAfterBoss
+      value: IntermediateAfterBoos
       objectReference: {fileID: 0}
     - target: {fileID: 1651943236409254309, guid: c104bfb3899044dbda8fc03b0e5d35f4, type: 3}
       propertyPath: scoreText
