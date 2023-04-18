@@ -19,6 +19,9 @@ public class WarpOnPortalEnter : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        SceneManager.LoadScene(nextLevel);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
     }
 }

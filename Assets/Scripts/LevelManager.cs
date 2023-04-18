@@ -71,34 +71,48 @@ public class LevelManager : MonoBehaviour
 
     public void LevelLost() 
     {
-        isGameOver = true;
-        //gameText.text = "YOU DIED!";
-        //gameText.gameObject.SetActive(true);
-        //Time.timeScale = 0f;
+        if (!isGameOver)
+        {
+            isGameOver = true;
+            //gameText.text = "YOU DIED!";
+            //gameText.gameObject.SetActive(true);
+            //Time.timeScale = 0f;
 
-        Camera.main.GetComponent<AudioSource>().pitch = 1;
-        AudioSource.PlayClipAtPoint(gameOverSFX, Camera.main.transform.position);
-        Invoke("chooseLostImage", 3);
+            foreach (AudioSource source in FindObjectsOfType<AudioSource>())
+            {
+                source.Stop();
+            }
+            Camera.main.GetComponent<AudioSource>().pitch = 1;
+            AudioSource.PlayClipAtPoint(gameOverSFX, Camera.main.transform.position);
+            chooseLostImage();
 
-        Invoke("LoadCurrentLevel", 7);
+            Invoke("LoadCurrentLevel", 5);
+        }
     }
 
     public void LevelBeat() 
     {
-        isGameOver = true;
-        //gameText.text = "YOU WIN!";
+        if (!isGameOver)
+        {
+            isGameOver = true;
+            //gameText.text = "YOU WIN!";
+            
+            //gameText.gameObject.SetActive(true);
+
         
-        //gameText.gameObject.SetActive(true);
+            Camera.main.GetComponent<AudioSource>().pitch = 2;
+            foreach (AudioSource source in FindObjectsOfType<AudioSource>())
+            {
+                source.Stop();
+            }
+            AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
 
-      
-        Camera.main.GetComponent<AudioSource>().pitch = 2;
-        AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
+            chooseWonImage();
+            
 
-        Invoke("chooseWonImage", 3);
-        
-
-        if (!string.IsNullOrEmpty(nextLevel)) {
-            Invoke("LoadNextLevel", 7);
+            if (!string.IsNullOrEmpty(nextLevel)) {
+                Invoke("LoadNextLevel", 5);
+            }
         }
         
     }

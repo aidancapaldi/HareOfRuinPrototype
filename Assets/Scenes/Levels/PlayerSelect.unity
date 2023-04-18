@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18263873, g: 0.22835052, b: 0.3071474, a: 1}
+  m_IndirectSpecularColor: {r: 0.18263865, g: 0.22835007, b: 0.30714673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9107623281e577f4fb5f9423de1cccfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beginLevel: Level 1
+  beginLevel: Garrett Level 1 playground
 --- !u!1 &444698251
 GameObject:
   m_ObjectHideFlags: 0

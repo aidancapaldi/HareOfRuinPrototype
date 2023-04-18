@@ -1,5 +1,4 @@
-﻿/* Scripted by Omabu - omabuarts@gmail.com */
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 

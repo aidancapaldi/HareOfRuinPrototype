@@ -252,6 +252,21 @@ MonoBehaviour:
   bunnyHeal: {fileID: 5457471438118595529, guid: 824f5664bac8a4f40a711ad7c95fdcc3, type: 3}
   healAmount: 10
   healSFX: {fileID: 8300000, guid: a77c55d6fe4e44b60964818c54b76eb7, type: 3}
+--- !u!114 &4433975446005787012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213942857215417518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3009a4f07b594bfea929a3833e526a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 6266962485396246365, guid: 76a5bf4fb924d48589a7e0201b28c85e, type: 3}
+  laserTimesValue: 3
+  laserCountValue: 20
 --- !u!54 &1856818824
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -592,6 +592,7 @@ MonoBehaviour:
   spellProjectile: {fileID: 4334760705391836879, guid: 614db81fcdf7c9d4badaad9f280842ec, type: 3}
   wandTip: {fileID: 1879569433632136594}
   projectileSpeed: 10
+  casterSFX: {fileID: 8300000, guid: 10e7313a8ee4e44d5a1a369bb5b7cfb5, type: 3}
 --- !u!114 &7731176616724846333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,11 +606,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 8517347845688216602}
   currentHealth: 0
   ProjectileDamage: 10
   SwordDamage: 20
   LaserDamage: 5
+  isDead: 0
 --- !u!1 &1955763975664877467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,3 +1087,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5418946956765205268, guid: 60473f202fd584fb7b30b4c3ffeeabca, type: 3}
   m_PrefabInstance: {fileID: 8048885711054513160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8517347845688216602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1837697715479275538, guid: 60473f202fd584fb7b30b4c3ffeeabca, type: 3}
+  m_PrefabInstance: {fileID: 8048885711054513160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1651943236409254308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651943236409254306}
+  - component: {fileID: 1651943236409254309}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1651943236409254306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651943236409254308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 473.01276, y: -30.67873, z: 470.0737}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651943236409254309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651943236409254308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3608e5925688e42f5bbbf9a07ed78ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lostImages:
+  - {fileID: 21300000, guid: 6a442d89345b5407fb0d78ce2ae2169e, type: 3}
+  - {fileID: 21300000, guid: 1244193d1d02d4b048e015d1ec2c7bb0, type: 3}
+  - {fileID: 21300000, guid: a645b955d0f114454a3d2c35871df623, type: 3}
+  - {fileID: 21300000, guid: 5a44bc3e958df4794a48490d36cf983c, type: 3}
+  - {fileID: 21300000, guid: 61fad667bc1bf482ca75e16badaecfea, type: 3}
+  lostImage: {fileID: 0}
+  canvasObject: {fileID: 0}
+  wonImages:
+  - {fileID: 21300000, guid: 6faea17a448914d08962130554c80255, type: 3}
+  - {fileID: 21300000, guid: 6d884459a709f478b8a9972820b897cd, type: 3}
+  - {fileID: 21300000, guid: e097c141d15ef4a3e9ce5079fc39f1e7, type: 3}
+  wonImage: {fileID: 0}
+  canvasObjectWon: {fileID: 0}
+  gameText: {fileID: 0}
+  scoreText: {fileID: 0}
+  gameOverSFX: {fileID: 8300000, guid: 7a378453915bf1348b8c5c09a38a1c02, type: 3}
+  gameWonSFX: {fileID: 8300000, guid: 7a378453915bf1348b8c5c09a38a1c02, type: 3}
+  lerpSpeed: 10
+  nextLevel: 

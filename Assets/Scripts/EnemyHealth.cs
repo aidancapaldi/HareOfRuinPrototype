@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Awake()
     {
-        healthSlider = GetComponentInChildren<Slider>();
+        // healthSlider = GetComponentInChildren<Slider>();
     }
 
     // Start is called before the first frame update
