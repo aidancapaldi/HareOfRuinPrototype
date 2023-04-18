@@ -19,6 +19,7 @@ public class Wandering : MonoBehaviour
     State state = State.Wandering;
     WanderingState currentWanderingAnim = WanderingState.Walk;
     ShopManager shopManager;
+    InventoryManager inventoryManager;
     int currentDestinationIdx = 0; // Has 2 WanderPoint children
     List<Vector3> destinations = new List<Vector3>();
     
@@ -28,6 +29,7 @@ public class Wandering : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetInteger("animState", (int) WanderingState.Walk);
         shopManager = FindObjectOfType<ShopManager>();
+        inventoryManager = FindObjectOfType<InventoryManager>();
         InvokeRepeating("PlayAnim", 3, 3);
         var wanderPt1 = transform.Find("WanderPoints/WanderPoint1").position;
         var wanderPt1Copy = new Vector3(wanderPt1.x, wanderPt1.y, wanderPt1.z);
@@ -81,6 +83,7 @@ public class Wandering : MonoBehaviour
         {
             // Show player the shop
             shopManager.ShowShop();
+            inventoryManager.ShowInventory();
             state = State.Still;
         }
     }
@@ -91,6 +94,7 @@ public class Wandering : MonoBehaviour
         {
             // Hide the shop UI
             shopManager.HideShop();
+            inventoryManager.HideInventory();
             state = State.Wandering;
         }
     }
