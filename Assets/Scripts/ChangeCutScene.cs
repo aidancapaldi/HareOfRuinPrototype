@@ -25,6 +25,18 @@ public class ChangeCutScene : MonoBehaviour
 
     public int i = 0;
 
+    public void Start() {
+        isCutSceneOver = false;
+        i = 0;
+    }
+
+    public void Update() {
+        //Debug.Log("Running");
+        if (Input.GetButtonDown("Fire1")) {
+            Invoke("changeImages", 0.1f);
+        }
+    }
+
 
     public void changeImages() // make sure to attach this to event trigger
     {
