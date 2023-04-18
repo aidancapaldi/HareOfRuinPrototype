@@ -87,6 +87,7 @@ public class LevelManager : MonoBehaviour
             chooseLostImage();
 
             Invoke("LoadCurrentLevel", 5);
+            Invoke("HideLostImage", 3);
         }
     }
 
@@ -112,9 +113,20 @@ public class LevelManager : MonoBehaviour
 
             if (!string.IsNullOrEmpty(nextLevel)) {
                 Invoke("LoadNextLevel", 5);
+                Invoke("HideWonImage", 3);
             }
         }
         
+    }
+
+    private void HideWonImage()
+    {
+        canvasObjectWon.gameObject.SetActive(false);
+    }
+
+    private void HideLostImage()
+    {
+        canvasObject.gameObject.SetActive(true);
     }
 
     public void LoadNextLevel() 
