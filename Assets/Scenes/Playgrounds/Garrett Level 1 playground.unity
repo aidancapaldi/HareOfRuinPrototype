@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38825694, g: 0.7281159, b: 0.7341304, a: 1}
+  m_IndirectSpecularColor: {r: 0.38809213, g: 0.7275574, b: 0.73333406, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1136,6 +1136,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 524163085358477016, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 524163085358477016, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 524163085358477016, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 524163086944090872, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
       propertyPath: m_Name
       value: MainCanvas
