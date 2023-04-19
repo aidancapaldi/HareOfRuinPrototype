@@ -45,7 +45,7 @@ public class ScrollScript : MonoBehaviour
             // Increment the Y value of the panel 
             Vector3 _incrementYPosition =
              new Vector3(_currentUIPosition.x,
-                         _currentUIPosition.y + 0.1f,
+                         _currentUIPosition.y + 0.4f,
                          _currentUIPosition.z);
             // Change the transform position to the new one
             //Debug.Log("New Position: " + _incrementYPosition);
