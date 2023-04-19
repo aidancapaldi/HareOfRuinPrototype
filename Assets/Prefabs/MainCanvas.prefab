@@ -1419,6 +1419,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 524163086944090876}
     m_Modifications:
+    - target: {fileID: 8677388500971045256, guid: 5c68b04abe4754cda86bbbd029ac6fe8, type: 3}
+      propertyPath: m_Text
+      value: Gulp! Time to fight Rebane's protector
+      objectReference: {fileID: 0}
     - target: {fileID: 8832545422399920178, guid: 5c68b04abe4754cda86bbbd029ac6fe8, type: 3}
       propertyPath: m_Name
       value: DirecitonsBackgroundLevel2
@@ -1457,7 +1461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8832545422399920179, guid: 5c68b04abe4754cda86bbbd029ac6fe8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 175
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 8832545422399920179, guid: 5c68b04abe4754cda86bbbd029ac6fe8, type: 3}
       propertyPath: m_LocalPosition.x

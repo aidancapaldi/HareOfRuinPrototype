@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18035254, g: 0.22578925, b: 0.30702662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -357,7 +357,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34449443}
-  m_LocalRotation: {x: 0.24935734, y: -0.0042188372, z: 0.0010863239, w: 0.9684018}
+  m_LocalRotation: {x: 0.24935734, y: -0.004218837, z: 0.0010863239, w: 0.96840173}
   m_LocalPosition: {x: 427.95712, y: 18.684273, z: 410.40036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -673,11 +673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.27247033
+      value: -0.2724704
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06448154
+      value: 0.064481534
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.y
@@ -685,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.40616915
+      value: 0.40616912
       objectReference: {fileID: 0}
     - target: {fileID: 51540890744404940, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1740,6 +1740,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 524163085358477016, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 524163085358477016, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 524163085358477016, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 524163086944090872, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
       propertyPath: m_Name
       value: MainCanvas
@@ -3808,7 +3820,7 @@ PrefabInstance:
       objectReference: {fileID: 1038405816}
     - target: {fileID: 1651943236409254309, guid: c104bfb3899044dbda8fc03b0e5d35f4, type: 3}
       propertyPath: nextLevel
-      value: IntermediateAfterBoos
+      value: IntermediateAfterBoss
       objectReference: {fileID: 0}
     - target: {fileID: 1651943236409254309, guid: c104bfb3899044dbda8fc03b0e5d35f4, type: 3}
       propertyPath: scoreText

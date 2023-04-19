@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0060138176, g: 0.06016229, b: 0.19518855, a: 1}
+  m_IndirectSpecularColor: {r: 0.00599583, g: 0.060183372, b: 0.19521302, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -638,6 +638,15 @@ PrefabInstance:
     - target: {fileID: 3814577185811423988, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814577185811423988, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895576446052039503, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
+      propertyPath: m_Text
+      value: I've made it to the evil mountains! I must follow the ridge, fight the
+        clones, and rescue my mentor...
       objectReference: {fileID: 0}
     - target: {fileID: 7247405188099234734, guid: 0de68f5dbf517184a9558f948a338087, type: 3}
       propertyPath: m_RootOrder
@@ -4660,15 +4669,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540889842823133, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.04673827
+      value: -0.046738274
       objectReference: {fileID: 0}
     - target: {fileID: 51540889842823133, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.33448422
+      value: -0.33448416
       objectReference: {fileID: 0}
     - target: {fileID: 51540889842823133, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17836277
+      value: 0.17836276
       objectReference: {fileID: 0}
     - target: {fileID: 51540889861053635, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4708,11 +4717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 51540890913983049, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.595001
+      value: -478.72
       objectReference: {fileID: 0}
     - target: {fileID: 51540890913983049, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -192.40002
+      value: -366.4
       objectReference: {fileID: 0}
     - target: {fileID: 51540890913983049, guid: 030a78c37df213d4a9620eb824e80898, type: 3}
       propertyPath: m_LocalPosition.z
